@@ -7,5 +7,5 @@
 - Nikki Kiga 
 - Rachel Donahue 
 
-# Description 
+## Description 
 - tech debt, need to update this when we solidify our app idea
