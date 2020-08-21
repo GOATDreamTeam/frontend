@@ -1,11 +1,9 @@
 import React from 'react';
-import SVG from './svg/SVG';
+import Autocomplete from './Autocomplete/Autocomplete';
 
-const App = () => {
-  return (
-    <SVG />
-  );
-};
-
-export default App;
-
+export default function App() {
+  return <>
+    <Autocomplete list={['Hydrangea', 'Daisy', 'Cedar', 'Fern Spikey', 'Fern squishy']}/>
+  </>;
+}
+  
