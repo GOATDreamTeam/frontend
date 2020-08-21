@@ -1,6 +1,9 @@
 import React from 'react';
+import Autocomplete from './Autocomplete/Autocomplete';
 
 export default function App() {
-  return <h1>Hello World</h1>;
+  return <>
+  <Autocomplete list={['Hydrangea', 'Daisy', 'Cedar', 'Fern Spikey', 'Fern squishy']}/>
+  </>;
 }
   
