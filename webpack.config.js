@@ -35,10 +35,10 @@ module.exports = {
         test: /\.jsx?$/,
         exclude: /node_modules/,
         use: {
-          loader: 'babel-loader',
+          loader: 'file-loader',
           options: {
-            cacheDirectory: true
-          }
+            name: 'images/[hash]-[name].[ext]'
+          },
         }
       },
       {
