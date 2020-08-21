@@ -1,6 +1,12 @@
-import React from 'react';
+import React, { useState } from 'react';
+import Header from './header/Header';
 
 export default function App() {
-  return <h1>Hello World</h1>;
+
+  const [theme, useTheme] = useState('light');
+  
+  return <>
+    <Header useTheme={useTheme} theme={theme}/>
+  </>;
 }
   
