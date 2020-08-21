@@ -1,9 +1,12 @@
-import React from 'react';
-import Autocomplete from './Autocomplete/Autocomplete';
+import React, { useState } from 'react';
+import Header from './header/Header';
 
 export default function App() {
+
+  const [theme, useTheme] = useState('light');
+  
   return <>
-  <Autocomplete list={['Hydrangea', 'Daisy', 'Cedar', 'Fern Spikey', 'Fern squishy']}/>
+    <Header useTheme={useTheme} theme={theme}/>
   </>;
 }
   
