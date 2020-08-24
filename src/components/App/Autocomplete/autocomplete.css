@@ -1,21 +1,19 @@
-body {
-  background: #2e856e;
-}
 .search {
   width: 40%;
   position: relative;
 }
 .searchInput {
-  border:0.1rem solid transparent;
+  border:0.1rem solid grey;
   border-radius: 0.1rem;
-  font-size: 2rem;
+  font-size: 2.0rem;
 }
 .searchInput:focus {
   outline: none;
-  font-size:2.5rem;
+  font-size:2.0rem;
   border-radius: 0.2rem;
   padding: 1rem;
   border: 0.1rem solid #8abaae;
+  transition: 0.04s;
 }
 .searchSubmit {
   height: 100%;
@@ -23,7 +21,6 @@ body {
   margin-top: -1.5em;
   position: absolute;
   top: 50%;
-  right: 0.2rem;
 
   opacity: 0.2;
   background-color: transparent;
@@ -40,23 +37,4 @@ body {
 .searchSubmit:focus {
   outline: none;
   opacity: 0.9;
-}
-
-ul.suggestions {
-  display: block;
-  list-style: none;
-  width: 40%;
-}
-
-ul.suggestions li {
-  display: block;
-}
-
-ul.suggestions li:hover {
-  cursor: pointer;
-  transition: 0.3s all;
-}
-
-ul.suggestions li.option-active {
-  font-size: 1.5rem;
 }
