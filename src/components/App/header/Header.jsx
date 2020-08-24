@@ -1,10 +1,10 @@
 import React from 'react';
-import PropTypes from 'prop-types';
+// import PropTypes from 'prop-types';
 import Autocomplete from '../Autocomplete/Autocomplete';
 import Toggle from '../toggle/Toggle';
 
-const Header = ({ theme, useTheme }) => {
-  console.log(theme);
+const Header = () => {
+
   return (
     <div>
       <Autocomplete list={['Hydrangea', 'Daisy', 'Cedar', 'Fern Spikey', 'Fern squishy']}/>
@@ -15,9 +15,9 @@ const Header = ({ theme, useTheme }) => {
   );
 };
 
-Header.propTypes = {
+// Header.propTypes = {
   
-};
+// };
 
 export default Header;
 
