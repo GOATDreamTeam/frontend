@@ -1,9 +1,10 @@
-//References code from the React Autocomplete 
+//References code from the React Autocomplete article from Eden Ella
 
 import React, { useState } from 'react';
 import PropTypes from 'prop-types';
 
 import styles from './autocomplete.css';
+import SearchPreview from '../../searchPreview/SearchPreview';
 
 const Autocomplete = ({ list }) => {
   const [activeOption, setActiveOption] = useState(0);
@@ -15,18 +16,20 @@ const Autocomplete = ({ list }) => {
   const onChange = (e) => {
     const searchTerm = e.currentTarget.value;
     setActiveOption(0);
-    setFilteredOptions(list.filter(option => option.toLowerCase().indexOf(searchTerm.toLowerCase()) > -1));
+    setFilteredOptions(list.filter((item => JSON.stringify(item).toLowerCase().indexOf(searchTerm.toLowerCase()) > -1)));
     setShowOptions(true);
     setSearchTerm(searchTerm);
   };
 
-  //When using arrows for 
+  //When using arrows to navigate through suggestions
   const onKeyDown = (e) => {
     //On enter
     if(e.keyCode === 13) {
       setActiveOption(0);
       setShowOptions(false);
       setSearchTerm(filteredOptions[activeOption]);
+      //can we add redirect to list page on enter too?
+
     //On up arrow
     } else if(e.keycode === 38) {
       if(activeOption === 0) {
@@ -47,11 +50,13 @@ const Autocomplete = ({ list }) => {
     e.preventDefault();
     console.log('button clicked!');
   };
+
+  // INSTEAD OF SETTING CURRENT TARGET SHOULD REDIRECT TO LIST PAGE
   //On click for suggestions
   const onClick = (e) => {
     setFilteredOptions([]);
     setShowOptions(false);
-    setSearchTerm(e.currentTarget.innerText);
+    console.log(e.currentTarget.innerText);
   };
 
   //Conditional rendering for suggestions
@@ -62,9 +67,7 @@ const Autocomplete = ({ list }) => {
         <ul className={styles.suggestions}>
           {filteredOptions.map(option => {
             return (
-              <li key={option} onClick={onClick}>
-                {option}
-              </li>
+              <SearchPreview key={option.scientific_name} option={option} onClick={onClick}/>
             );
           })}
         </ul>
@@ -81,6 +84,7 @@ const Autocomplete = ({ list }) => {
   return (
     <>
       <div className={styles.search}>
+        
         <form onSubmit={onSubmit}>
           <input type="text" 
             className={styles.searchInput}
