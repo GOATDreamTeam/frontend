@@ -9,8 +9,8 @@ const Toggle = () => {
   } = useAccessibility();
 
   useEffect(() => {
-    console.log('we are changing the theme');
-    console.log(theme);
+    // console.log('we are changing the theme');
+    // console.log(theme);
   }, [theme]);
 
   return (

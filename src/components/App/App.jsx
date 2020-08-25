@@ -16,7 +16,7 @@ export default function App() {
       <Header/>
       <Switch>
         <Route exact path="/" component={SplashPage} />
-        <Route path="/plants-list" component={List} />
+        <Route path="/plants-list/:plantName" component={List} />
         <Route path="/plant-detail/:id" component={DetailPage} />
       </Switch>
       <Footer />
