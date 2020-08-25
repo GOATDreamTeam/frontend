@@ -5,7 +5,7 @@ export const useList = () => {
   const [plants, setPlants] = useState([]);
 
   useEffect(() => {
-    fetchPlantSearch('cucumber')
+    fetchPlantSearch('cucumber', '1')
       .then(setPlants);
   }, []);
 

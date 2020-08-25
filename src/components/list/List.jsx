@@ -2,8 +2,10 @@ import React from 'react';
 import ListItem from './ListItem';
 import { useList } from '../../hooks/listHooks';
 
-export default function List() {
+const List = () => {
   const { plants } = useList();
+
+  console.log(plants);
   
   const plantElements = plants.map(plant => (
     <li key={plant.id}>
@@ -16,4 +18,6 @@ export default function List() {
       {plantElements}
     </ul>
   );
-}
+};
+
+export default List;
