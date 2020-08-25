@@ -1,21 +1,34 @@
 import React from 'react';
 import PropTypes from 'prop-types';
-import { fetchPlantById } from '../../services/fetchCalls.js';
 import { useDetails } from '../../hooks/detailHooks.js';
-//get the data
-//dispay
+import Gallery from '../photos/Gallery.jsx';
+
 
 const DetailPage = ({ match }) => {
-  // const params = new URLSearchParams(location.search);
-  // console.log(params);
-  // const id = params.get('id');
   const id = match.params.id;
-  console.log(id);
-  const plantData = useDetails(id);
-  console.log(plantData);
+  const { plantDetail } = useDetails(id);
+  if(!plantDetail) return <h1>loading</h1>;
+  const { common_name,
+    edible, family, genus,
+    flower_images, fruit_images,
+    habit_images, image_url,
+    scientific_name, vegetable } = plantDetail;
+  console.log('Im in the Detail Page', image_url);
+  
   return (
     <div>
       
+      <h1>{common_name}</h1>
+      <h2>{edible ? 'edible' : 'not edible'}</h2>
+      <h2>{family}</h2>
+      <h2>{genus}</h2>
+      <figure>
+        <img src={image_url} alt={common_name} />
+        <figcaption>{common_name}</figcaption>
+      </figure>
+      <h2>{scientific_name}</h2>
+      <h2>{vegetable ? 'vegetable' : 'not vegetable'}</h2>
+      <Gallery photos={flower_images} /> 
     </div>
   );
 };
