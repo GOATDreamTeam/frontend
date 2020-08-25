@@ -7,7 +7,7 @@ import styles from './autocomplete.css';
 import SearchPreview from '../../searchPreview/SearchPreview';
 import { useHistory } from 'react-router-dom';
 
-const Autocomplete = ({ list }) => {
+const Autocomplete = () => {
   const [activeOption, setActiveOption] = useState(0);
   const [filteredOptions, setFilteredOptions] = useState([]);
   const [showOptions, setShowOptions] = useState(false);
@@ -20,7 +20,14 @@ const Autocomplete = ({ list }) => {
   const onChange = (e) => {
     const searchTerm = e.currentTarget.value;
     setActiveOption(0);
+    // make service for top searches on the fe that uses the route from be 
+    // use service on line 27(below) to get us a list back of filtered results
+    // set filtered options (.then off the search results and filter off of this)
     setFilteredOptions(list.filter((item => JSON.stringify(item).toLowerCase().indexOf(searchTerm.toLowerCase()) > -1)));
+
+
+
+
     setShowOptions(true);
     console.log(searchTerm);
     setSearchTerm(searchTerm);
