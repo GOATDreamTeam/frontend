@@ -21,13 +21,8 @@ const Autocomplete = () => {
   const onChange = (e) => {
     const searchTerm = e.currentTarget.value;
     setActiveOption(0);
-    // make service for top searches on the fe that uses the route from be 
-    // use service on line 27(below) to get us a list back of filtered results
-    // set filtered options (.then off the search results and filter off of this)
-
     fetchTopPlantSearch(searchTerm)
       .then(setFilteredOptions);
-
     setShowOptions(true);
     setSearchTerm(searchTerm);
   };
@@ -97,7 +92,6 @@ const Autocomplete = () => {
   return (
     <>
       <div className={styles.search}>
-        
         <form onSubmit={onSubmit}>
           <input type="text" 
             className={styles.searchInput}

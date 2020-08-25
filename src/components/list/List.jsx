@@ -6,8 +6,6 @@ import { useParams } from 'react-router-dom';
 const List = () => {
   const { plantName } = useParams();
   const { plants } = useList(plantName);
-
-  console.log(plants);
   
   const plantElements = plants.map(plant => (
     <li key={plant.id}>
