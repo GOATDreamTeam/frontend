@@ -11,7 +11,7 @@ exports[`App component renders App 1`] = `
     />
     <Route
       component={[Function]}
-      path="/plants-list"
+      path="/plants-list/:plantName"
     />
   </Switch>
   <Footer />
