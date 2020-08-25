@@ -5,6 +5,7 @@ import PropTypes from 'prop-types';
 
 import styles from './autocomplete.css';
 import SearchPreview from '../../searchPreview/SearchPreview';
+import { useHistory } from 'react-router-dom';
 
 const Autocomplete = ({ list }) => {
   const [activeOption, setActiveOption] = useState(0);
@@ -12,12 +13,16 @@ const Autocomplete = ({ list }) => {
   const [showOptions, setShowOptions] = useState(false);
   const [searchTerm, setSearchTerm] = useState('');
 
+  // lets us push to a new url
+  const history = useHistory();
+
   //On input change filter from the list
   const onChange = (e) => {
     const searchTerm = e.currentTarget.value;
     setActiveOption(0);
     setFilteredOptions(list.filter((item => JSON.stringify(item).toLowerCase().indexOf(searchTerm.toLowerCase()) > -1)));
     setShowOptions(true);
+    console.log(searchTerm);
     setSearchTerm(searchTerm);
   };
 
@@ -48,7 +53,9 @@ const Autocomplete = ({ list }) => {
   //Need an onSubmit for the form or button to render list of matches for list page
   const onSubmit = (e) => {
     e.preventDefault();
-    console.log('button clicked!');
+    // console.log('button clicked!');
+    history.push(`/plants-list/${searchTerm}`);
+
   };
 
   // INSTEAD OF SETTING CURRENT TARGET SHOULD REDIRECT TO LIST PAGE

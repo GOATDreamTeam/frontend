@@ -1,9 +1,11 @@
 import React from 'react';
 import ListItem from './ListItem';
 import { useList } from '../../hooks/listHooks';
+import { useParams } from 'react-router-dom';
 
 const List = () => {
-  const { plants } = useList();
+  const { plantName } = useParams();
+  const { plants } = useList(plantName);
 
   console.log(plants);
   
