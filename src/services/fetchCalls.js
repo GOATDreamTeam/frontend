@@ -3,7 +3,7 @@ export const fetchPlantSearch = (plant, page) => {
     .then(res => res.json());
 };
 
-export const fetchTopPlantSearch = () => { 
-  return fetch('https://goatdreamteam.herokuapp.com/api/v1/topsearch')
+export const fetchTopPlantSearch = (search) => { 
+  return fetch(`https://goatdreamteam.herokuapp.com/api/v1/topsearch?search=${search}`)
     .then(res => res.json());
 };
