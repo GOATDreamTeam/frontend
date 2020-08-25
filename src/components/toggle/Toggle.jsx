@@ -1,5 +1,5 @@
 import React, { useEffect } from 'react';
-import { useAccessibility } from '../../../hooks/appContext';
+import { useAccessibility } from '../../hooks/appContext';
 
 const Toggle = () => {
   

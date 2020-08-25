@@ -1,29 +1,24 @@
-import React, { useEffect, useState } from 'react';
-import Header from './header/Header';
-import { fetchPlantSearch } from './services/fetchCalls';
+import React from 'react';
+import {
+  BrowserRouter as Router,
+  Switch,
+  Route
+} from 'react-router-dom';
+import Header from '../header/Header';
+import SplashPage from '../splash-page/SplashPage';
+import Footer from '../footer/Footer';
+import List from '../list/List';
 
 export default function App() {
-
-
-  const [plants, setPlants] = useState([]);
-
-  useEffect(() => {
-    fetchPlantSearch('cucumber')
-      .then(setPlants);
-  }, []);
- 
-  const plantElements = plants.map(plant => (
-    <li key={plant.common_name}>
-      <p>{plant.common_name}</p>
-    </li>
-  ));
-
-  return <>
-    <Header/>
-
-    <ul>
-      {plantElements}
-    </ul>
-  </>;
+  return (
+    <Router>
+      <Header/>
+      <Switch>
+        <Route exact path="/" component={SplashPage} />
+        <Route path="/plants-list" component={List} />
+      </Switch>
+      <Footer />
+    </Router>
+  );
 }
   
