@@ -8,6 +8,7 @@ import Header from '../header/Header';
 import SplashPage from '../splash-page/SplashPage';
 import Footer from '../footer/Footer';
 import List from '../list/List';
+import DetailPage from '../detail/DetailPage';
 
 export default function App() {
   return (
@@ -16,6 +17,7 @@ export default function App() {
       <Switch>
         <Route exact path="/" component={SplashPage} />
         <Route path="/plants-list/:plantName" component={List} />
+        <Route path="/plant-detail/:id" component={DetailPage} />
       </Switch>
       <Footer />
     </Router>
