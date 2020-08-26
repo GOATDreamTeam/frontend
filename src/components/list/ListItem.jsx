@@ -3,7 +3,7 @@ import PropTypes from 'prop-types';
 import { Link } from 'react-router-dom';
 
 const ListItem = ({ image_url, common_name, scientific_name, id }) => (
-  <Link to={`/plant-details/:${id}`} >
+  <Link to={`/plant-detail/${id}`} >
     <figure>
       <img src={image_url} />
       <figcaption>Common name: {common_name} - Scientific name: {scientific_name} - Id: {id}</figcaption>
