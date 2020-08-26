@@ -33,9 +33,9 @@ describe('useList hooks', () => {
   });
   
   it('sets plants state on mount', () => {
-    const { result, waitFor } = renderHook(() => useList());
+    const { result, waitForNextUpdate } = renderHook(() => useList());
 
-    return waitFor(() => {
+    return waitForNextUpdate(() => {
       expect(result.current.plants).toEqual([
         {
           id: 125316,
