@@ -4,7 +4,8 @@ export const fetchPlantSearch = (plant, page) => {
 };
 
 export const fetchTopPlantSearch = (search) => { 
-  return fetch(`https://goatdreamteam.herokuapp.com/api/v1/topsearch?search=${search}`);
+  return fetch(`https://goatdreamteam.herokuapp.com/api/v1/topsearch?search=${search}`)
+    .then(res => res.json());
 };
 
 export const fetchPlantById = (id) => { 
@@ -12,7 +13,7 @@ export const fetchPlantById = (id) => {
     .then(res => res.json());
 };
 
-export const updateTopSearchList = (scientific_name, common_name, image_url) => { 
+export const updateTopSearchList = ({ scientific_name, common_name, image_url }) => { 
   return fetch('https://goatdreamteam.herokuapp.com/api/v1/topsearch', {
     method: 'PUT', 
     body: JSON.stringify({
