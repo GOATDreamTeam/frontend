@@ -42,9 +42,9 @@ describe('useDetails hooks', () => {
   });
 
   it('sets plantDetails state on mount', () => {
-    const { result, waitFor } = renderHook(() => useDetails());
+    const { result, waitForNextUpdate } = renderHook(() => useDetails());
 
-    return waitFor(() => {
+    return waitForNextUpdate(() => {
       expect(result.current.plantDetails).toEqual({
         id: 130924,
         common_name: 'squirting cucumber',
