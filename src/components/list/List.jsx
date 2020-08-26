@@ -3,8 +3,14 @@ import ListItem from './ListItem';
 import { useList } from '../../hooks/listHooks';
 import { useParams } from 'react-router-dom';
 import { updateTopSearchList } from '../../services/fetchCalls';
+import { useAccessibility } from '../../hooks/appContext';
+import { useListStyles } from './listPageStyle';
 
 const List = () => {
+
+  const { theme } = useAccessibility();
+  const classes = useListStyles(theme);
+
   const { plantName } = useParams();
   const { plants } = useList(plantName);
   
@@ -14,13 +20,13 @@ const List = () => {
   };
 
   const plantElements = plants.map(plant => (
-    <li key={plant.id}>
-      <ListItem onClick={() => handleClick(plant)} {...plant} />
+    <li  className={classes.column} key={plant.id}>
+      <ListItem imageClass={classes} onClick={() => handleClick(plant)} {...plant} />
     </li>
   ));
 
   return (
-    <ul>
+    <ul className={classes.row}>
       {plantElements}
     </ul>
   );

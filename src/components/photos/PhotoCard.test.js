@@ -1,23 +1,27 @@
 import React from 'react';
-import { shallow } from 'enzyme';
+import { mount } from 'enzyme';
 import PhotoCard from './PhotoCard';
+import AccessibilityProvider from '../../providers/AppProvider';
+
 
 describe('Photocard component', () =>{
+
   const photo = {
     image_url: 'photoURL',
     copyright: 'made 2020'
   };
   let wrapper;
   beforeEach(() => {
-    wrapper = shallow(<PhotoCard photo={photo}/>);
+
+    wrapper = mount(
+      <AccessibilityProvider>
+        <PhotoCard photo={photo}/>
+      </AccessibilityProvider>);
+          
   });
   
   it('has one figure', () => { 
     expect(wrapper.find('figure')).toHaveLength(1);
-  });
-
-  it('has one img', () => { 
-    expect(wrapper.find('img')).toHaveLength(1);
   });
 
 }

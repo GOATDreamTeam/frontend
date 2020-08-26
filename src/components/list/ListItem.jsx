@@ -3,13 +3,24 @@ import PropTypes from 'prop-types';
 import { Link } from 'react-router-dom';
 import LazyLoad from 'react-lazy-load';
 
-const ListItem = ({ onClick, image_url, common_name, scientific_name, id }) => (
+
+const ListItem = ({ 
+  onClick, 
+  image_url, 
+  common_name, 
+  scientific_name, 
+  id,
+  imageClass }) => (
+
+
   <Link to={`/plant-detail/${id}`} >
-    <figure onClick={onClick}>
+    <figure onClick={onClick} id={id}>
       <LazyLoad>
-        <img src={image_url} />
+        <img className={imageClass.img} src={image_url} />
       </LazyLoad>
-      <figcaption>Common name: {common_name} - Scientific name: {scientific_name} - Id: {id}</figcaption>
+      
+      <figcaption>
+        {common_name} - {scientific_name} </figcaption>
     </figure>
   </Link>
 );
@@ -19,7 +30,8 @@ ListItem.propTypes = {
   common_name: PropTypes.string.isRequired,
   scientific_name: PropTypes.string.isRequired,
   id: PropTypes.number.isRequired, 
-  
+  onClick: PropTypes.func.isRequired,
+  imageClass: PropTypes.object.isRequired 
 };
 
 export default ListItem;

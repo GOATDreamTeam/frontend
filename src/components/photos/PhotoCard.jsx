@@ -1,10 +1,24 @@
 import React from 'react';
 import PropTypes from 'prop-types';
+// import jss from 'jss';
+// import preset from 'jss-preset-default';
+import { createUseStyles } from 'react-jss';
+import { useAccessibility } from '../../hooks/appContext';
+
+
+const useStyles = createUseStyles({
+  frame: {
+    border: theme => theme === 'standard' ? 'solid red 5px' : 'solid green 5px' 
+  }
+});
 import LazyLoad from 'react-lazy-load';
 
 const PhotoCard = ({ photo }) => {
+  const { theme } = useAccessibility();
+  const classes = useStyles(theme);
+
   return (
-    <div>
+    <div className={classes.frame}>
       <figure>
         <LazyLoad>
           <img src={photo.image_url} alt={photo.copyright} />
