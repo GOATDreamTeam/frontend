@@ -3,7 +3,6 @@ import PropTypes from 'prop-types';
 import { useDetails } from '../../hooks/detailHooks.js';
 import Gallery from '../photos/Gallery.jsx';
 
-
 const DetailPage = ({ match }) => {
   const id = match.params.id;
   const { plantDetail } = useDetails(id);
@@ -17,7 +16,6 @@ const DetailPage = ({ match }) => {
   
   return (
     <div>
-      
       <h1>Common Name: {common_name}</h1>
       <h2>Is it edible? {edible ? 'edible' : 'not edible'}</h2>
       <h2>Family: {family}</h2>
