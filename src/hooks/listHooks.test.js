@@ -25,8 +25,8 @@ jest.mock('../services/fetchCalls.js', () => ({
 describe('useList hooks', () => {
   it('has plants state', () => {
     return act(() => {
-      const { result, waitFor } = renderHook(() => useList());
-      return waitFor(() => {
+      const { result, waitForNextUpdate } = renderHook(() => useList());
+      return waitForNextUpdate(() => {
         expect(result.current.plants).not.toBeUndefined();
       });
     });
