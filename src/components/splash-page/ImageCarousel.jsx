@@ -14,8 +14,11 @@ function ImageCarousel() {
       <img className={styles.f3} src={Image3} alt=""/> 
       <img className={styles.f4} src={Image4} alt=""/> 
       <img className={styles.f5} src={Image5} alt=""/> 
+      <div>
+      Welcome to FloraFile! Whether you are a plant newby or plant scientist...(open-access library, curiosity, accessibility)
+      </div>
     </div>
-    
+    // image, changing images with fade npm package 
   );
 }
 

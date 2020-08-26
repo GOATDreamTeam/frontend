@@ -15,7 +15,7 @@ const Toggle = () => {
 
   return (
     <section>
-      <input id="toggle" type="checkbox" name="toggle" onChange={handleChange} checked={theme === 'standard'}/>
+      <input id="toggle" type="checkbox" name="toggle" onChange={handleChange} checked={theme === 'mono'}/>
          
     </section>
   );

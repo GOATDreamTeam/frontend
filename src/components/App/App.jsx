@@ -11,7 +11,9 @@ import List from '../list/List';
 import DetailPage from '../detail/DetailPage';
 import AboutUs from '../aboutus/AboutUs';
 
+
 export default function App() {
+  
   return (
     <Router>
       <Header/>
