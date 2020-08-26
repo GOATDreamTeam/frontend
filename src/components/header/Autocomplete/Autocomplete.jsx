@@ -41,10 +41,9 @@ const Autocomplete = () => {
     if(e.keyCode === 13) {
       setActiveOption(0);
       setShowOptions(false);
-      setSearchTerm(filteredOptions[activeOption]);
-      //can we add redirect to list page on enter too?
+      history.push(`/plants-list/${searchTerm}`);
 
-    //On up arrow
+    //On up
     } else if(e.keycode === 38) {
       if(activeOption === 0) {
         return;
@@ -62,17 +61,15 @@ const Autocomplete = () => {
   //Need an onSubmit for the form or button to render list of matches for list page
   const onSubmit = (e) => {
     e.preventDefault();
-    // console.log('button clicked!');
     history.push(`/plants-list/${searchTerm}`);
-
   };
 
   // INSTEAD OF SETTING CURRENT TARGET SHOULD REDIRECT TO LIST PAGE
   //On click for suggestions
-  const onClick = (e) => {
+  const onClick = () => {
     setFilteredOptions([]);
     setShowOptions(false);
-    console.log(e.currentTarget.innerText);
+    history.push(`/plants-list/${searchTerm}`);
   };
 
   //Conditional rendering for suggestions

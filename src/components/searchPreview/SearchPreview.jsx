@@ -6,7 +6,7 @@ const SearchPreview = ({ option, onClick }) => {
   return (
     <li onClick={onClick} className={styles.preview}>
       <div className={styles.photo}>
-        <img src={option.image_url} alt={option.common_name}/>
+        {/* <img src={option.image_url} alt={option.common_name}/> */}
       </div>
       <div className={styles.text}>
         <div className={styles.common}>
