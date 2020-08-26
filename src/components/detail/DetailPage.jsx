@@ -12,7 +12,7 @@ const DetailPage = ({ match }) => {
     edible, family, genus,
     flower_images, fruit_images,
     habit_images, image_url,
-    scientific_name, vegetable } = plantDetail;
+    scientific_name, leaf_images, bark_images, vegetable } = plantDetail;
   console.log('Im in the Detail Page', image_url);
   
   return (
@@ -28,7 +28,11 @@ const DetailPage = ({ match }) => {
       </figure>
       <h2>Scientific Name:{scientific_name}</h2>
       <h2>Is it a veggy? {vegetable ? 'eat it' : 'don\'t eat it'}</h2>
+      <Gallery photos={leaf_images} />
       <Gallery photos={flower_images} /> 
+      <Gallery photos={fruit_images} />
+      <Gallery photos={bark_images} />
+      <Gallery photos={habit_images} />
     </div>
   );
 };
