@@ -21,8 +21,8 @@ const SearchPreview = ({ option, onClick }) => {
 };
 
 SearchPreview.propTypes = {
-  option: PropTypes.object,
-  onClick: PropTypes.func
+  option: PropTypes.object.isRequired,
+  onClick: PropTypes.func.isRequired
 };
 
 export default SearchPreview;
