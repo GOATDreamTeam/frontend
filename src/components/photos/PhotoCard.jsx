@@ -11,6 +11,7 @@ const useStyles = createUseStyles({
     border: theme => theme === 'standard' ? 'solid red 5px' : 'solid green 5px' 
   }
 });
+import LazyLoad from 'react-lazy-load';
 
 const PhotoCard = ({ photo }) => {
   const { theme } = useAccessibility();
@@ -18,8 +19,10 @@ const PhotoCard = ({ photo }) => {
 
   return (
     <div className={classes.frame}>
-      <figure >
-        <img  src={photo.image_url} alt={photo.copyright} />
+      <figure>
+        <LazyLoad>
+          <img src={photo.image_url} alt={photo.copyright} />
+        </LazyLoad>
         <figcaption>{photo.copyright}</figcaption>
       </figure>
     </div>
