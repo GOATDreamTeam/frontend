@@ -18,16 +18,16 @@ const DetailPage = ({ match }) => {
   return (
     <div>
       
-      <h1>{common_name}</h1>
-      <h2>{edible ? 'edible' : 'not edible'}</h2>
-      <h2>{family}</h2>
-      <h2>{genus}</h2>
+      <h1>Common Name: {common_name}</h1>
+      <h2>Is it edible? {edible ? 'edible' : 'not edible'}</h2>
+      <h2>Family: {family}</h2>
+      <h2>Genus: {genus}</h2>
       <figure>
         <img src={image_url} alt={common_name} />
         <figcaption>{common_name}</figcaption>
       </figure>
-      <h2>{scientific_name}</h2>
-      <h2>{vegetable ? 'vegetable' : 'not vegetable'}</h2>
+      <h2>Scientific Name:{scientific_name}</h2>
+      <h2>Is it a veggy? {vegetable ? 'eat it' : 'don\'t eat it'}</h2>
       <Gallery photos={flower_images} /> 
     </div>
   );
