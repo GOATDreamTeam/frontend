@@ -10,7 +10,9 @@ import Footer from '../footer/Footer';
 import List from '../list/List';
 import DetailPage from '../detail/DetailPage';
 
+
 export default function App() {
+  
   return (
     <Router>
       <Header/>
