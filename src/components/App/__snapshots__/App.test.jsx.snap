@@ -17,6 +17,10 @@ exports[`App component renders App 1`] = `
       component={[Function]}
       path="/plant-detail/:id"
     />
+    <Route
+      component={[Function]}
+      path="/about-us"
+    />
   </Switch>
   <Footer />
 </BrowserRouter>

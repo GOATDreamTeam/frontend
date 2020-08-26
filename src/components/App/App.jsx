@@ -9,6 +9,7 @@ import SplashPage from '../splash-page/SplashPage';
 import Footer from '../footer/Footer';
 import List from '../list/List';
 import DetailPage from '../detail/DetailPage';
+import AboutUs from '../aboutus/AboutUs';
 
 export default function App() {
   return (
@@ -18,6 +19,7 @@ export default function App() {
         <Route exact path="/" component={SplashPage} />
         <Route path="/plants-list/:plantName" component={List} />
         <Route path="/plant-detail/:id" component={DetailPage} />
+        <Route path="/about-us" component={AboutUs} />
       </Switch>
       <Footer />
     </Router>
