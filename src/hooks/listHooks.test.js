@@ -25,17 +25,17 @@ jest.mock('../services/fetchCalls.js', () => ({
 describe('useList hooks', () => {
   it('has plants state', () => {
     return act(() => {
-      const { result, waitFor } = renderHook(() => useList());
-      return waitFor(() => {
+      const { result, waitForNextUpdate } = renderHook(() => useList());
+      return waitForNextUpdate(() => {
         expect(result.current.plants).not.toBeUndefined();
       });
     });
   });
   
   it('sets plants state on mount', () => {
-    const { result, waitFor } = renderHook(() => useList());
+    const { result, waitForNextUpdate } = renderHook(() => useList());
 
-    return waitFor(() => {
+    return waitForNextUpdate(() => {
       expect(result.current.plants).toEqual([
         {
           id: 125316,

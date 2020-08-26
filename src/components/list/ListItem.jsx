@@ -13,10 +13,10 @@ const ListItem = ({
 
 
   <Link to={`/plant-detail/${id}`} >
-    <figure onClick={onClick}>
-      <img className={imageClass.img}src={image_url} />
+    <figure onClick={onClick} id={id}>
+      <img className={imageClass.img} src={image_url} />
       <figcaption>
-        Common name: {common_name} - Scientific name: {scientific_name} - Id: {id}</figcaption>
+        {common_name} - {scientific_name} </figcaption>
     </figure>
   </Link>
 );
@@ -26,7 +26,8 @@ ListItem.propTypes = {
   common_name: PropTypes.string.isRequired,
   scientific_name: PropTypes.string.isRequired,
   id: PropTypes.string.isRequired, 
-  onClick: PropTypes.func.isRequired
+  onClick: PropTypes.func.isRequired,
+  imageClass: PropTypes.string.isRequired 
 };
 
 export default ListItem;
