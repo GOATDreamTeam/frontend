@@ -1,0 +1,53 @@
+.Carousel {
+    display: flex;
+    align-content: center;
+    justify-content: center;
+    width: 300px;
+    height: 300px;
+}
+
+.Carousel img {
+    width: 300px;
+    height: 300px;
+    object-fit: cover;
+    position:absolute;
+    -webkit-animation-name: fade;
+    -webkit-animation-iteration-count: infinite;
+    -webkit-animation-duration: 10s;
+    animation-name: fade;
+    animation-iteration-count: infinite;
+    animation-duration: 10s;
+}
+
+.f1 {
+    background-color: lightblue; 
+}
+
+.f2 {
+    -webkit-animation-delay: -2s;
+    background-color: yellow;
+}
+
+.f3 {
+    -webkit-animation-delay: -4s;
+    background-color: lightgreen;
+}
+
+.f4 {
+    -webkit-animation-delay: -6s;
+    background-color: lightgreen;
+}
+
+.f5 {
+    -webkit-animation-delay: -8s;
+    background-color: lightgreen;
+}
+
+@-webkit-keyframes fade {
+    0% {opacity: 0;}
+    20% {opacity: 1;}
+    33% {opacity: 1;}
+    53% {opacity: 0;}
+    100% {opacity: 0;}
+}
+
