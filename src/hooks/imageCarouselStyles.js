@@ -56,11 +56,4 @@ export const useImageCarouselStyles = createUseStyles({
   
   }
 
-//   @keyframes fade {
-//     0% {opacity: 0;}
-//     20% {opacity: 1;}
-//     33% {opacity: 1;}
-//     53% {opacity: 0;}
-//     100% {opacity: 0;}
-// }
 });
