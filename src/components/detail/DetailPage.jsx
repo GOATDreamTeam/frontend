@@ -17,7 +17,7 @@ const DetailPage = ({ match }) => {
   return (
     <>
       <div>
-        <h1>{common_name} | {scientific_name}</h1>
+        <h1>{common_name}  |  {scientific_name}</h1>
         <img src={image_url} alt={common_name} />
         
         <ul>

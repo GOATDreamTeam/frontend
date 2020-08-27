@@ -44,7 +44,5 @@ export const useListStyles = createUseStyles({
       flex: '25%',
       'max-width': '100%'
     }
-  },
-
+  }
 });
-  
