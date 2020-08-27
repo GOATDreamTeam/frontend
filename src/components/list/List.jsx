@@ -12,7 +12,7 @@ const List = () => {
   const classes = useListStyles(theme);
 
   const { plantName } = useParams();
-  const { plants } = useList(plantName);
+  const { plants, Pagination } = useList(plantName);
   
   // onclick here? 
   const handleClick = (plant) => {
@@ -26,9 +26,12 @@ const List = () => {
   ));
 
   return (
-    <ul className={classes.row}>
-      {plantElements}
-    </ul>
+    <>
+      <Pagination />
+      <ul className={classes.row}>
+        {plantElements}
+      </ul>
+    </>
   );
 };
 
