@@ -14,7 +14,7 @@ export const useDetailStyles = createUseStyles({
   }, 
 
   detailPageUl: { 
-    'text-decoration': 'none'
+    'list-style-type': 'none'
   },
 
   galleryImagesDisplay: {

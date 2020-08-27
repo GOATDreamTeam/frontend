@@ -1,10 +1,10 @@
 import React from 'react';
 import PropTypes from 'prop-types';
 import { useAccessibility } from '../../hooks/appContext';
-
 import LazyLoad from 'react-lazy-load';
 import AccessibleImage from './AccessibleImage';
 import { usePhotoCardStyles } from '../../hooks/photoCardStyles';
+import { placeholder } from '../../hooks/globalStyles';
 
 const PhotoCard = ({ photo }) => {
   const { theme } = useAccessibility();
@@ -14,9 +14,15 @@ const PhotoCard = ({ photo }) => {
     <div >
       <figure>
         <LazyLoad>
-          <AccessibleImage className={classes.img} src={photo.image_url} alt={photo.copyright} />
+          
+          <div>
+            {photo.image_url 
+              ? 
+              <AccessibleImage className={classes.img} alt={photo.copyright} src={photo.image_url} />
+              : 
+              <AccessibleImage className={classes.img} alt="image unavailable" src={placeholder} />}
+          </div>
         </LazyLoad>
-        {/* <figcaption>{photo.copyright}</figcaption> */}
       </figure>
     </div>
   );
