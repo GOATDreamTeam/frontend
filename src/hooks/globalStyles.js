@@ -1,13 +1,10 @@
-// import React from 'react';
-import { createUseStyles } from 'react-jss'; 
-
 // only what we want every page to have 
+import { createUseStyles } from 'react-jss'; 
 
 export const placeholder = 'https://upload.wikimedia.org/wikipedia/commons/thumb/6/6c/No_image_3x4.svg/1280px-No_image_3x4.svg.png';
 
 export const cssVariables = theme => ({
-  primaryColor: theme === 'standard' ? 'yellow' : 'black',
-  // sandbox 
+  primaryColor: theme === 'standard' ? 'yellow' : 'black'
 });
 
 export const useStyles = createUseStyles({
@@ -24,12 +21,10 @@ export const useStyles = createUseStyles({
     '&hover' : {
       color: 'blue',
       background: 'pink'
-
     },
   },
 
   basicDisplay: {
     'background': theme => theme === 'standard' ? 'linear-gradient(#00c400, #FFFF)' : 'white',
   }
-
 });
