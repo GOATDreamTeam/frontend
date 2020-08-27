@@ -2,6 +2,7 @@ import React from 'react';
 import PropTypes from 'prop-types';
 import { Link } from 'react-router-dom';
 import LazyLoad from 'react-lazy-load';
+import AccessibleImage from '../photos/accessibleImage';
 
 
 const ListItem = ({ 
@@ -16,7 +17,7 @@ const ListItem = ({
   <Link to={`/plant-detail/${id}`} >
     <figure onClick={onClick} id={id}>
       <LazyLoad className={imageClass.row}>
-        <img className={imageClass.img} src={image_url} />
+        <AccessibleImage className={imageClass.img} src={image_url} />
       </LazyLoad>
       
       <figcaption className={imageClass.row}>

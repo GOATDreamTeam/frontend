@@ -4,8 +4,7 @@ import { createUseStyles } from 'react-jss';
 // only what we want every page to have 
 
 export const cssVariables = theme => ({
-  primaryColor: theme === 'standard' ? 'yellow' : 'black',
-  // sandbox 
+  primaryColor: theme === 'standard' ? 'red' : 'black',
 });
 
 export const useStyles = createUseStyles({
