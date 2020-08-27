@@ -13,6 +13,7 @@ export const usePagination = () => {
     previousPage,
     nextPage,
     setTotalPages,
+    // eslint-disable-next-line react/display-name
     Pagination: () => (<Pagination 
       totalPages={totalPages}
       page={page}
