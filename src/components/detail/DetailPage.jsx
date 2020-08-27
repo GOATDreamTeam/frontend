@@ -2,24 +2,37 @@ import React from 'react';
 import PropTypes from 'prop-types';
 import { useDetails } from '../../hooks/detailHooks.js';
 import Gallery from '../photos/Gallery.jsx';
+import { placeholder } from '../../hooks/globalStyles';
 
 const DetailPage = ({ match }) => {
   const id = match.params.id;
   const { plantDetail } = useDetails(id);
   if(!plantDetail) return <h1>loading</h1>;
-  const { common_name,
-    edible, family, genus,
-    flower_images, fruit_images,
-    habit_images, image_url,
-    scientific_name, leaf_images, bark_images } = plantDetail;
-  console.log('Im in the Detail Page', image_url);
-  
+  const { 
+    common_name,
+    edible, 
+    family, 
+    genus,
+    flower_images, 
+    fruit_images,
+    habit_images, 
+    image_url,
+    scientific_name, 
+    leaf_images, 
+    bark_images 
+  } = plantDetail;  
   return (
     <>
       <div>
         <h1>{common_name}  |  {scientific_name}</h1>
-        <img src={image_url} alt={common_name} />
-        
+        <div>
+          {image_url 
+            ? 
+            <img src={image_url} alt={common_name} />
+            :
+            <img alt="image unavailable" src={placeholder} />}
+        </div>
+
         <ul>
           <h3>Taxonomy </h3>
           <li>Family: {family}</li>
@@ -42,7 +55,6 @@ const DetailPage = ({ match }) => {
 
 DetailPage.propTypes = {
   match: PropTypes.object.isRequired
-  
 };
 
 export default DetailPage;
