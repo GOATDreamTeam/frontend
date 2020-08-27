@@ -2,14 +2,38 @@
 
 import React, { useState, useEffect } from 'react';
 import PropTypes from 'prop-types';
-
+import { createUseStyles } from 'react-jss';
 // import styles from './autocomplete.css';
 import SearchPreview from '../../searchPreview/SearchPreview';
 import { useHistory } from 'react-router-dom';
 import { fetchTopPlantSearch } from '../../../services/fetchCalls';
-import { useSearchStyling } from '../../../hooks/searchStylingHooks';
+import { useAccessibility } from '../../../hooks/appContext';
+// import { useStyles } from '../../../hooks/globalStyles';
+// import { useSearchStyling } from '../../../hooks/searchStylingHooks';
+
+
+const useSearchStyles = createUseStyles({
+  input: {
+    padding: '0.2rem',
+    fontSize: '16px'
+  },
+
+  button: {
+    padding: '0.2rem',
+    fontSize: '16px'
+  },
+
+  searchBar: {
+    // display: 'flex',
+    // flexDirection: 'column'
+  }
+});
+
 
 const Autocomplete = () => {
+  const { theme } = useAccessibility();
+  const classes = useSearchStyles(theme);
+  
   const [activeOption, setActiveOption] = useState(0);
   const [filteredOptions, setFilteredOptions] = useState([]);
   const [showOptions, setShowOptions] = useState(false);
@@ -17,7 +41,7 @@ const Autocomplete = () => {
 
   // lets us push to a new url
   const history = useHistory();
-  const styles = useSearchStyling();
+  // const styles = useSearchStyling();
 
   useEffect(() => { 
     if(!searchTerm) return setShowOptions(false);
@@ -75,7 +99,7 @@ const Autocomplete = () => {
   if(showOptions && searchTerm) {
     if(filteredOptions.length) {
       optionList = (
-        <ul className={styles.suggestions}>
+        <ul>
           {filteredOptions.map(option => {
             return (
               <SearchPreview key={option.scientific_name} option={option} onClick={onClick}/>
@@ -86,7 +110,7 @@ const Autocomplete = () => {
     } else {
       optionList = (
         <>
-          <p className={styles.noSuggestions}>No suggestions</p>
+          <p>No suggestions</p>
         </>
       );
     }
@@ -94,16 +118,20 @@ const Autocomplete = () => {
 
   return (
     <>
-      <div className={styles.search}>
+      <div>
         <form onSubmit={onSubmit}>
-          <div>
-            <input type="text"
+          <div className={classes.searchBar}>
+            <input 
+              className={classes.input} 
+              type="text"
               placeholder="Search Plants..."
-              className={styles.searchInput}
               onChange={onChange}
               onKeyDown={onKeyDown}
-              value={searchTerm}/>
-            <button type="submit" className={styles.searchSubmit}></button>
+              value={searchTerm}
+            />
+            <button className={classes.button}>
+              <i style={{ fontSize: '14px' }}className="material-icons">search</i>
+            </button>
           </div>
         </form>
       </div>

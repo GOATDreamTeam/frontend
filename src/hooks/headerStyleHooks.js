@@ -15,8 +15,9 @@ export const useHeaderStyle = createUseStyles({
     fontSize: '30px'
   },
 
-  search: {
-    float: 'right'
+  searchBar: {
+    display: 'flex',
+    alignItems: 'center'
   },
 
 });
