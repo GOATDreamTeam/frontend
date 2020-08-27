@@ -10,7 +10,9 @@ export const useHeaderStyle = createUseStyles({
   },
 
   name: {
-    float: 'left'
+    float: 'left',
+    fontFamily: 'Berkshire Swash',
+    fontSize: '30px'
   },
 
   search: {
