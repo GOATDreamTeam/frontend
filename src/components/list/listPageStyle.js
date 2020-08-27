@@ -1,4 +1,5 @@
 import { createUseStyles } from 'react-jss';
+import { cssVariables } from '../../hooks/globalStyles';
 
 export const useListStyles = createUseStyles({
     
@@ -22,7 +23,7 @@ export const useListStyles = createUseStyles({
     width: '250px',
     height: '250px',
     'object-fit': 'cover',
-    border: theme => theme === 'standard' ? 'solid 2px pink' : 'solid 2px black',
+    border: theme => `${cssVariables(theme).primaryColor}`,
     'border-radius': '2em'
   },
 

@@ -1,7 +1,5 @@
 import React from 'react';
 import PropTypes from 'prop-types';
-// import jss from 'jss';
-// import preset from 'jss-preset-default';
 import { createUseStyles } from 'react-jss';
 import { useAccessibility } from '../../hooks/appContext';
 

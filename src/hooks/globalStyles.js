@@ -3,6 +3,11 @@ import { createUseStyles } from 'react-jss';
 
 // only what we want every page to have 
 
+export const cssVariables = theme => ({
+  primaryColor: theme === 'standard' ? 'yellow' : 'black',
+  // sandbox 
+});
+
 export const useStyles = createUseStyles({
 
   globalText: {
@@ -24,4 +29,5 @@ export const useStyles = createUseStyles({
   basicDisplay: {
     'background': theme => theme === 'standard' ? 'linear-gradient(#00c400, #FFFF)' : 'white',
   }
+
 });
