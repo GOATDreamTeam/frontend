@@ -2,7 +2,7 @@ import React from 'react';
 import PropTypes from 'prop-types';
 import { Link } from 'react-router-dom';
 import LazyLoad from 'react-lazy-load';
-import AccessibleImage from '../photos/accessibleImage';
+import AccessibleImage from '../photos/AccessibleImage';
 
 
 const ListItem = ({ 

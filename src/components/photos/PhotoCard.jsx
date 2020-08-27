@@ -3,7 +3,7 @@ import PropTypes from 'prop-types';
 import { useAccessibility } from '../../hooks/appContext';
 
 import LazyLoad from 'react-lazy-load';
-import AccessibleImage from './accessibleImage';
+import AccessibleImage from './AccessibleImage';
 import { usePhotoCardStyles } from '../../hooks/photoCardStyles';
 
 const PhotoCard = ({ photo }) => {

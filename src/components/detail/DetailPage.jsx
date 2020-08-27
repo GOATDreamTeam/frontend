@@ -3,7 +3,7 @@ import PropTypes from 'prop-types';
 import { useDetails } from '../../hooks/detailHooks.js';
 import Gallery from '../photos/Gallery.jsx';
 import { cssVariables } from '../../hooks/globalStyles';
-import AccessibleImage from '../photos/accessibleImage.jsx';
+import AccessibleImage from '../photos/AccessibleImage.jsx';
 import { useListStyles } from '../list/listPageStyle.js';
 import { useAccessibility } from '../../hooks/appContext.js';
 import { useDetailStyles } from '../../hooks/detailStyles.js';
