@@ -22,7 +22,6 @@ export const useStyles = createUseStyles({
   },
 
   basicDisplay: {
-    'background-color': theme => theme === 'standard' ? 'green' : 'white',
-    
+    'background': theme => theme === 'standard' ? 'linear-gradient(#00c400, #FFFF)' : 'white',
   }
 });

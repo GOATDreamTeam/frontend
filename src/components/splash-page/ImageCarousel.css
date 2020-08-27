@@ -24,22 +24,22 @@
 }
 
 .f2 {
-    -webkit-animation-delay: -2s;
+    animation-delay: -2s;
 }
 
 .f3 {
-    -webkit-animation-delay: -4s;
+    animation-delay: -4s;
 }
 
 .f4 {
-    -webkit-animation-delay: -6s;
+    animation-delay: -6s;
 }
 
 .f5 {
-    -webkit-animation-delay: -8s;
+    animation-delay: -8s;
 }
 
-@-webkit-keyframes fade {
+@keyframes fade {
     0% {opacity: 0;}
     20% {opacity: 1;}
     33% {opacity: 1;}
