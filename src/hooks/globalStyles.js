@@ -1,11 +1,10 @@
 // import React from 'react';
-import { createUseStyles } from 'react-jss';
-
+import { createUseStyles } from 'react-jss'; 
 
 // only what we want every page to have 
 
 export const useStyles = createUseStyles({
-    
+
   globalText: {
     fontFamily: 'monospace',
     color: theme => theme === 'standard' ? 'red' : 'black'
@@ -20,5 +19,9 @@ export const useStyles = createUseStyles({
       background: 'pink'
 
     },
+  },
+
+  basicDisplay: {
+    'background': theme => theme === 'standard' ? 'linear-gradient(#00c400, #FFFF)' : 'white',
   }
 });
