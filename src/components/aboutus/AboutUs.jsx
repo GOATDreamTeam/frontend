@@ -55,7 +55,7 @@ export default function AboutUs() {
           <p>Linkedin: https://www.linkedin.com/in/breeannbolinsky/</p>
         </div>
 
-        {/* Breeann */} 
+        {/* Nikki */} 
         <div className={classes.individualPersonDiv}>
           <img src={NikkiProfile} alt="" className={classes.aboutUsProfileImg}/>
           <h3>Nikki</h3>
@@ -67,6 +67,7 @@ export default function AboutUs() {
           <p>Portfolio: </p>
         </div>
 
+        { /* Langston */} 
         <div className={classes.individualPersonDiv}>
           <img src={LangstonProfile} alt="" className={classes.aboutUsProfileImg}/>
           <h3>Langston</h3>
@@ -78,6 +79,7 @@ export default function AboutUs() {
           <p>Portfolio: </p>
         </div>
 
+        {/* Rachel */} 
         <div className={classes.individualPersonDiv}>
           <img src={RachelProfile} alt="" className={classes.aboutUsProfileImg}/>
           <h3>Rachel</h3>
