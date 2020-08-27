@@ -29,4 +29,5 @@ export const useStyles = createUseStyles({
   basicDisplay: {
     'background': theme => theme === 'standard' ? 'linear-gradient(#00c400, #FFFF)' : 'white',
   }
+
 });
