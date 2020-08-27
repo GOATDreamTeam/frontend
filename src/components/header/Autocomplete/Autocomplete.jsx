@@ -1,16 +1,10 @@
-//References code from the React Autocomplete article from Eden Ella
-
 import React, { useState, useEffect } from 'react';
 import PropTypes from 'prop-types';
 import { createUseStyles } from 'react-jss';
-// import styles from './autocomplete.css';
 import SearchPreview from '../../searchPreview/SearchPreview';
 import { useHistory } from 'react-router-dom';
 import { fetchTopPlantSearch } from '../../../services/fetchCalls';
 import { useAccessibility } from '../../../hooks/appContext';
-// import { useStyles } from '../../../hooks/globalStyles';
-// import { useSearchStyling } from '../../../hooks/searchStylingHooks';
-
 
 const useSearchStyles = createUseStyles({
   input: {
