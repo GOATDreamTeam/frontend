@@ -3,10 +3,11 @@
 import React, { useState, useEffect } from 'react';
 import PropTypes from 'prop-types';
 
-import styles from './autocomplete.css';
+// import styles from './autocomplete.css';
 import SearchPreview from '../../searchPreview/SearchPreview';
 import { useHistory } from 'react-router-dom';
 import { fetchTopPlantSearch } from '../../../services/fetchCalls';
+import { useSearchStyling } from '../../../hooks/searchStylingHooks';
 
 const Autocomplete = () => {
   const [activeOption, setActiveOption] = useState(0);
@@ -16,7 +17,7 @@ const Autocomplete = () => {
 
   // lets us push to a new url
   const history = useHistory();
-
+  const styles = useSearchStyling();
 
   useEffect(() => { 
     if(!searchTerm) return setShowOptions(false);
@@ -31,9 +32,6 @@ const Autocomplete = () => {
     setActiveOption(0);
     setSearchTerm(searchTerm);
   };
-  // refactor the above into a useeffect and have useffect trigger everytime searchTerm changes
-  // 
-  
 
   //When using arrows to navigate through suggestions
   const onKeyDown = (e) => {
@@ -98,17 +96,19 @@ const Autocomplete = () => {
     <>
       <div className={styles.search}>
         <form onSubmit={onSubmit}>
-          <input type="text" 
-            className={styles.searchInput}
-            onChange={onChange}
-            onKeyDown={onKeyDown}
-            value={searchTerm}/>
-          <button type="submit" className={styles.searchSubmit}></button>
+          <div>
+            <input type="text"
+              placeholder="Search Plants..."
+              className={styles.searchInput}
+              onChange={onChange}
+              onKeyDown={onKeyDown}
+              value={searchTerm}/>
+            <button type="submit" className={styles.searchSubmit}></button>
+          </div>
         </form>
       </div>
       {optionList}
     </>
-
   );
 };
 
