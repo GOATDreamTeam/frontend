@@ -11,27 +11,32 @@ const DetailPage = ({ match }) => {
     edible, family, genus,
     flower_images, fruit_images,
     habit_images, image_url,
-    scientific_name, leaf_images, bark_images, vegetable } = plantDetail;
+    scientific_name, leaf_images, bark_images } = plantDetail;
   console.log('Im in the Detail Page', image_url);
   
   return (
-    <div>
-      <h1>Common Name: {common_name}</h1>
-      <h2>Is it edible? {edible ? 'edible' : 'not edible'}</h2>
-      <h2>Family: {family}</h2>
-      <h2>Genus: {genus}</h2>
-      <figure>
+    <>
+      <div>
+        <h1>{common_name} | {scientific_name}</h1>
         <img src={image_url} alt={common_name} />
-        <figcaption>{common_name}</figcaption>
-      </figure>
-      <h2>Scientific Name:{scientific_name}</h2>
-      <h2>Is it a veggy? {vegetable ? 'eat it' : 'don\'t eat it'}</h2>
-      <Gallery photos={leaf_images} />
-      <Gallery photos={flower_images} /> 
-      <Gallery photos={fruit_images} />
-      <Gallery photos={bark_images} />
-      <Gallery photos={habit_images} />
-    </div>
+        
+        <ul>
+          <h3>Taxonomy </h3>
+          <li>Family: {family}</li>
+          <li>Genus: {genus}</li>
+          <h3>Plant Information: </h3>
+          <p>{edible ? 'Edible' : 'inedible'}</p>
+        </ul>
+      </div>
+
+      <div>
+        <Gallery photos={leaf_images} />
+        <Gallery photos={flower_images} /> 
+        <Gallery photos={fruit_images} />
+        <Gallery photos={bark_images} />
+        <Gallery photos={habit_images} />
+      </div>
+    </>
   );
 };
 

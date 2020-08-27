@@ -1,27 +1,14 @@
 // Jest Snapshot v1, https://goo.gl/fbAQLP
 
 exports[`App component renders App 1`] = `
-<BrowserRouter>
-  <Header />
-  <Switch>
-    <Route
-      component={[Function]}
-      exact={true}
-      path="/"
-    />
-    <Route
-      component={[Function]}
-      path="/plants-list/:plantName"
-    />
-    <Route
-      component={[Function]}
-      path="/plant-detail/:id"
-    />
-    <Route
-      component={[Function]}
-      path="/about-us"
-    />
-  </Switch>
-  <Footer />
-</BrowserRouter>
+<ContextProvider
+  value={
+    Object {
+      "handleChange": [Function],
+      "theme": "standard",
+    }
+  }
+>
+  <App />
+</ContextProvider>
 `;
