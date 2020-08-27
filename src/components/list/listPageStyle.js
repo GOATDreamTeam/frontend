@@ -19,11 +19,10 @@ export const useListStyles = createUseStyles({
   },
 
   img: {
-    filter: theme => theme === 'standard' ? 'grayscale(0%)' : 'grayscale(100%)',
     width: '250px',
     height: '250px',
     'object-fit': 'cover',
-    border: theme => `${cssVariables(theme).primaryColor}`,
+    border: theme => `solid 2px ${cssVariables(theme).primaryColor}`,
     'border-radius': '2em'
   },
 
