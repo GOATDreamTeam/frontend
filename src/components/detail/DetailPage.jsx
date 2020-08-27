@@ -31,9 +31,9 @@ const DetailPage = ({ match }) => {
         <AccessibleImage  className={classes.img}
           src={image_url} alt={common_name} />
         
-        <ul>
+        <ul className={classes.detailPageUl}>
           <h3>Taxonomy </h3>
-          <li>Family: {family}</li>
+          <li >Family: {family}</li>
           <li>Genus: {genus}</li>
           <h3>Plant Information: </h3>
           <p>{edible ? 'Edible' : 'inedible'}</p>

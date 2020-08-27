@@ -3,19 +3,25 @@ import { cssVariables } from './globalStyles';
 
 export const useDetailStyles = createUseStyles({
 
-  //   mainImageDisplay: {
-  //     flex: '25%',
-  //     'max-width': '20%',
-  //     'justify-content': 'center',
-  //     'align-items': 'center',
-  //   }, 
+  mainImageDisplay: {
+    display: 'flex',
+    'justify-content': 'center',
+    'align-items': 'center',
+    'border': '2px solid blue',
+    'flex-direction': 'column',
+    'text-align': 'center',
+
+  }, 
+
+  detailPageUl: { 
+    'text-decoration': 'none'
+  },
 
   galleryImagesDisplay: {
     display: 'flex',
     'flex-wrap': 'wrap',
-    // 'justify-content': 'right',
-    // 'align-items': 'center',
-    // 'list-style': 'none', 
+    'justify-content': 'center',
+    'align-items': 'center',
     'border': '2px solid purple'
   },
 

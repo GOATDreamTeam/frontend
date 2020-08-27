@@ -4,11 +4,11 @@ import { useAccessibility } from '../../hooks/appContext';
 
 import LazyLoad from 'react-lazy-load';
 import AccessibleImage from './accessibleImage';
-import { useListStyles } from '../list/listPageStyle';
+import { usePhotoCardStyles } from '../../hooks/photoCardStyles';
 
 const PhotoCard = ({ photo }) => {
   const { theme } = useAccessibility();
-  const classes = useListStyles(theme);
+  const classes = usePhotoCardStyles(theme);
 
   return (
     <div >
