@@ -20,7 +20,7 @@ const List = () => {
   };
 
   const plantElements = plants.map(plant => (
-    <li  className={classes.column} key={plant.id}>
+    <li className={classes.column} key={plant.id}>
       <ListItem imageClass={classes} onClick={() => handleClick(plant)} {...plant} />
     </li>
   ));
