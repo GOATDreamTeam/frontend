@@ -18,6 +18,7 @@ export const useListStyles = createUseStyles({
   },
 
   img: {
+    filter: theme => theme === 'standard' ? 'grayscale(0%)' : 'grayscale(100%)',
     width: '250px',
     height: '250px',
     'object-fit': 'cover',
