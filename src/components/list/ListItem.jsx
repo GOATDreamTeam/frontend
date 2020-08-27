@@ -11,7 +11,7 @@ const ListItem = ({
   scientific_name, 
   id,
   imageClass }) => (
-
+    
 
   <Link to={`/plant-detail/${id}`} >
     <figure onClick={onClick} id={id}>
