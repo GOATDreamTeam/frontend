@@ -27,5 +27,6 @@ export const updateTopSearchList = ({ scientific_name, common_name, image_url })
   })
     .then(res => res.json());
 };
+
 // tech debt 
-// on the backend, limit it to maybe 5 pictures and add pagination as our images are loading slowly
+// add pagination as our images are loading slowly
