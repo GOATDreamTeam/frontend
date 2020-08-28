@@ -27,7 +27,8 @@ export const useImageCarouselStyles = createUseStyles({
     'animation-duration': '11s',
     // default is eas in, but makes the fade steps linear through below
     // 'animation-timing-function': 'linear',
-    filter: theme => theme === 'standard' ? 'grayscale(0%)' : 'grayscale(100%)'
+    filter: theme => theme === 'standard' ? 'grayscale(0%)' : 'grayscale(100%)',
+    'boxShadow': '2px 2px 4px black'
   },
 
   f2: {

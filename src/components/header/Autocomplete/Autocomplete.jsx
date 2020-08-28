@@ -14,9 +14,13 @@ const useSearchStyles = createUseStyles({
   button: {
     padding: '0.2rem',
     fontSize: '16px'
-  }
-});
+  },
 
+  ul: {
+    listStyle: 'none'
+  }
+
+});
 
 const Autocomplete = () => {
   const { theme } = useAccessibility();
@@ -37,7 +41,7 @@ const Autocomplete = () => {
   if(showOptions && searchTerm) {
     if(filteredOptions.length) {
       optionList = (
-        <ul>
+        <ul className={classes.ul}>
           {filteredOptions.map(option => {
             return (
               <SearchPreview key={option.scientific_name} option={option} onClick={onClick}/>
@@ -48,7 +52,7 @@ const Autocomplete = () => {
     } else {
       optionList = (
         <>
-          <p>No suggestions</p>
+          <p>No Sugestions At This Time</p>
         </>
       );
     }

@@ -12,25 +12,26 @@ const ListItem = ({
   scientific_name, 
   id,
   imageClass }) => (
-
-  <Link to={`/plant-detail/${id}`} >
-    <figure onClick={onClick} id={id}>
+  <>
+    <Link to={`/plant-detail/${id}`} >
+      <figure onClick={onClick} id={id}>
     
-      <LazyLoad className={imageClass.row}>
-        <div>
-          {image_url 
-            ? 
-            <AccessibleImage className={imageClass.img} src={image_url} />
-            : 
-            <AccessibleImage className={imageClass.img} src={placeholder} />}
-        </div>
-      </LazyLoad>
-      
-      <figcaption className={imageClass.row}>
-        {common_name} <br/> {scientific_name} </figcaption>
+        <LazyLoad className={imageClass.row}>
+          <div>
+            {image_url 
+              ? 
+              <AccessibleImage className={imageClass.img} src={image_url} />
+              : 
+              <AccessibleImage className={imageClass.img} src={placeholder} />}
+          </div>
+        </LazyLoad>
 
-    </figure>
-  </Link>
+      </figure>
+    
+      <figcaption className={imageClass.row}>
+        {common_name} ~<br/> {scientific_name} </figcaption>
+    </Link>
+  </>
 );
 
 ListItem.propTypes = {
