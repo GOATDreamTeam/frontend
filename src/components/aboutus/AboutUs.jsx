@@ -70,7 +70,7 @@ export default function AboutUs() {
           <img src={NikkiProfile} alt="" className={classes.aboutUsProfileImg}/>
           <h3 className={classes.fullName}>Nikki</h3>
           <h4 className={classes.descriptionTitle}>FullStack Developer</h4>
-          <p>Lorem Ipsum has been the industyr standard dummy text ever since the 1500s, when an unknown printer took a galley of type and scrambled it to make a type specimen book. It has survived not only five centuries, but also the leap into electronic typesetting, remaining essentially unchanged.</p>
+          <p>Nikki Kiga is a software engineer who appreciates clean data and straightforward tooling. She is an active member of the Oregon Mycological Society and can be found making circles in the forest on weekends. In her spare time, she enjoys sculpting in clay and Cinema 4d.</p>
           <br/>
 
           <ul className={classes.socialMediaList}>
@@ -99,6 +99,7 @@ export default function AboutUs() {
           <br/>
           <br/>
           <br/>
+          <br/>
           <ul className={classes.socialMediaList}>
             <li>
               <a href="https://github.com/langstonBS">
@@ -119,6 +120,7 @@ export default function AboutUs() {
           <h3 className={classes.fullName}>Rachel</h3>
           <h4 className={classes.descriptionTitle}>FullStack Developer & Nature Nerd</h4>
           <p>A regular plant eater who is consistently nourished, surprised, and inspired by the natural world.</p>
+          <br/>
           <br/>
           <br/>
           <br/>
