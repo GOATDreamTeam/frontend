@@ -25,10 +25,10 @@ export const useStyles = createUseStyles({
     fontFamily: 'times new roman',
     color: theme => theme === 'standard' ? 'green' : 'black ', 
 
-    '&hover' : {
-      color: 'blue',
-      background: 'pink'
-    },
+    // '&hover' : {
+    //   color: 'blue',
+    //   background: 'pink'
+    // },
   },
 
   basicDisplay: {

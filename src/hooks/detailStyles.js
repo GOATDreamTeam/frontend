@@ -7,7 +7,7 @@ export const useDetailStyles = createUseStyles({
     display: 'flex',
     'justify-content': 'center',
     'align-items': 'center',
-    'border': '2px solid blue',
+    // 'border': '2px solid blue',
     'flex-direction': 'column',
     'text-align': 'center',
     // 'width': '50%',
@@ -23,7 +23,7 @@ export const useDetailStyles = createUseStyles({
     'flex-wrap': 'wrap',
     'justify-content': 'center',
     'align-items': 'center',
-    'border': '2px solid purple'
+    // 'border': '2px solid purple'
   },
 
   img: {
