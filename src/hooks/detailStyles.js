@@ -12,6 +12,8 @@ export const useDetailStyles = createUseStyles({
     'text-align': 'center',
     color: theme => `${cssVariables(theme).primaryColor}`
 
+    // 'width': '50%',
+    // 'height': '50%',
   }, 
 
   detailPageUl: { 

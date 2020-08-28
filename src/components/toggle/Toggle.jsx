@@ -1,25 +1,31 @@
-import React, { useEffect } from 'react';
+import React from 'react';
 import { useAccessibility } from '../../hooks/appContext';
 import { useToggleStyles } from '../../hooks/useToggleStyleHooks';
 
 const Toggle = () => {
 
-  const toggleStyles = useToggleStyles();
+  const theme  = useAccessibility();
+  const classes = useToggleStyles(theme);
   
   const {
-    theme, 
     handleChange
   } = useAccessibility();
 
-  useEffect(() => {
-  }, [theme]);
-
   return (
     <section>
-      <label>
-        <input id="toggle" type="checkbox" name="toggle" onChange={handleChange} checked={theme === 'mono'}/>
-        Check for Monochrome color theme!
-        <span className={toggleStyles.slider}></span>
+      <label >
+        <input 
+          className={classes.text}
+          id="toggle" 
+          type="checkbox" 
+          name="toggle" 
+          onChange={handleChange} 
+          checked={theme === 'mono'}/>
+          
+      Check for Monochrome
+        
+
+        {/* <span className={classes.slider}></span> */}
       </label>
     </section>
   );
