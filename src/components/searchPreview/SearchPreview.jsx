@@ -12,7 +12,6 @@ const SearchPreview = ({ option, onClick }) => {
   return (
     <li onClick={onClick} className={classes.preview}>
       <div >
-
         <AccessibleImage className={classes.photo} src={option.image_url} alt={option.common_name}/>
       </div>
       <div className={classes.text}>
