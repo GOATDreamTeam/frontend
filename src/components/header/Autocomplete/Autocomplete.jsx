@@ -15,14 +15,8 @@ const useSearchStyles = createUseStyles({
   button: {
     padding: '0.2rem',
     fontSize: '16px'
-  },
-
-  searchBar: {
-    // display: 'flex',
-    // flexDirection: 'column'
   }
 });
-
 
 const Autocomplete = () => {
   const { theme } = useAccessibility();
@@ -35,7 +29,6 @@ const Autocomplete = () => {
 
   // lets us push to a new url
   const history = useHistory();
-  // const styles = useSearchStyling();
 
   useEffect(() => { 
     if(!searchTerm) return setShowOptions(false);
