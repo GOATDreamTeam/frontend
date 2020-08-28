@@ -13,7 +13,8 @@ const List = () => {
   const classes = useListStyles(theme);
 
   const { plantName } = useParams();
-  const { plants, Pagination } = useList(plantName);
+  const decodeURI = decodeURIComponent(plantName);
+  const { plants, Pagination } = useList(decodeURI);
   
   // onclick here? 
   const handleClick = (plant) => {
@@ -28,7 +29,6 @@ const List = () => {
 
   return (
     <>
-      {console.log(plantElements)}
       <Pagination className={classes.paging} />
       
       <ul className={classes.row}>
