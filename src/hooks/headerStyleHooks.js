@@ -25,6 +25,5 @@ export const useHeaderStyle = createUseStyles({
   searchBar: {
     display: 'flex',
     alignItems: 'center'
-  },
-
+  }
 });
