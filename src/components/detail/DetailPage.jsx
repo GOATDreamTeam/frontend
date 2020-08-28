@@ -43,7 +43,7 @@ const DetailPage = ({ match }) => {
           <h3>Taxonomy </h3>
           <li>Family: {family}</li>
           <li>Genus: {genus}</li>
-          <h3>Is it edibile? </h3>
+          <h3>Is it edible? </h3>
           <p>{edible ? 'Yes' : 'No'}</p>
         </ul>
       </div>

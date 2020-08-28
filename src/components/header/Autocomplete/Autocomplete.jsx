@@ -17,10 +17,10 @@ const useSearchStyles = createUseStyles({
     fontSize: '16px'
   },
 
-  searchBar: {
-    // display: 'flex',
-    // flexDirection: 'column'
+  ul: {
+    listStyle: 'none'
   }
+
 });
 
 
@@ -93,7 +93,7 @@ const Autocomplete = () => {
   if(showOptions && searchTerm) {
     if(filteredOptions.length) {
       optionList = (
-        <ul>
+        <ul className={classes.ul}>
           {filteredOptions.map(option => {
             return (
               <SearchPreview key={option.scientific_name} option={option} onClick={onClick}/>
@@ -104,7 +104,7 @@ const Autocomplete = () => {
     } else {
       optionList = (
         <>
-          <p>No suggestions</p>
+          <p>No Sugestions At This Time</p>
         </>
       );
     }
