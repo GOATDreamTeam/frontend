@@ -10,7 +10,7 @@ export const useSearchStyles = createUseStyles({
     // preview on hover 
     '&:hover': {
       background: theme => `${cssVariables(theme).hoverColor}`,
-      opacity: '.70'
+      border: '2px solid black'
     }
   },
 
@@ -41,7 +41,7 @@ export const useSearchStyles = createUseStyles({
 
   scientific: {
     lineHeight: '12px',
-    color: '#80868b',
+    color: theme => theme === 'standard' ? '#80868b' : 'black',
     marginTop: '2px'
   }
 
