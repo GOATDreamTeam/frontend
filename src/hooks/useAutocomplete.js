@@ -1,4 +1,4 @@
-import { useState, useEffect } from 'react';
+import { useState } from 'react';
 import { fetchTopPlantSearch } from '../services/fetchCalls';
 import { useHistory } from 'react-router-dom';
 
@@ -13,17 +13,18 @@ export const useAutocomplete = () => {
   const onChange = (e) => {
     const input = e.currentTarget.value;
     setSearchTerm(input);
-    if(!searchTerm) {
+    if(!input) {
       return setShowOptions(false);
     }
-    fetchTopPlantSearch(searchTerm)
+    fetchTopPlantSearch(input)
       .then(setFilteredOptions)
       .then(() => setShowOptions(true));
   };
   
   const onSearch = (text) => {
     setShowOptions(false);
-    history.push(`/plants-list/${text}`);
+    const urlFriendly = encodeURIComponent(text);
+    history.push(`/plants-list/${urlFriendly}`);
     setSearchTerm('');
   };
 
