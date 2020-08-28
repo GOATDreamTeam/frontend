@@ -8,6 +8,7 @@ export const headerColor = {
   color: '#214044'
 };
 
+
 export const cssVariables = theme => ({
   //right now this is controlling the frame color around the images
   primaryColor: theme === 'standard' ? '#6c6a6a' : 'black'
