@@ -25,6 +25,7 @@
   "author": "",
   "license": "ISC",
   "dependencies": {
+    "@svgr/webpack": "^5.4.0",
     "jss": "^10.4.0",
     "jss-preset-default": "^10.4.0",
     "react": "^16.13.1",
