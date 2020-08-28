@@ -19,7 +19,11 @@ export const useListStyles = createUseStyles({
     'justify-content': 'center',
     'align-items': 'center',
     'list-style': 'none',
-    'padding': '20px'
+    'padding': '5px'
+  },
+
+  text: {
+    color: theme => `${cssVariables(theme).primaryColor}`
   },
 
   img: {

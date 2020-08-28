@@ -7,14 +7,10 @@ export const useDetailStyles = createUseStyles({
     display: 'flex',
     'justify-content': 'center',
     'align-items': 'center',
-    // 'border': '2px solid blue',
     paddingTop: '10px',
     'flex-direction': 'column',
     'text-align': 'center',
     color: theme => `${cssVariables(theme).primaryColor}`
-
-    // 'width': '50%',
-    // 'height': '50%',
   }, 
 
   title: {
