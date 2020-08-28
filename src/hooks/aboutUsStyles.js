@@ -1,8 +1,5 @@
 /* eslint-disable no-undef */
-// import React from 'react';
 import { createUseStyles } from 'react-jss'; 
-
-// only what we want every page to have 
 
 export const useAboutUsStyles = createUseStyles({
 
@@ -12,66 +9,79 @@ export const useAboutUsStyles = createUseStyles({
     'flex-wrap': 'wrap',
     'justify-content': 'center',
     'align-items': 'center',
-    border: 'solid red 3px',
     position: 'relative',
+  },
+
+  pageTitleQuote: {
+    display: 'flex', 
+    'justify-content': 'center', 
+    'text-align': 'center',
+    'flex-direction': 'column',
+    margin: '1.5em'
+  },
+
+  pageTitle: {
+    'text-align': 'center'
   },
 
   individualPersonDiv: {
     display: 'flex',
-    // width: '30%',
+    width: '300px',
     'justify-content': 'center',
     'flex-direction': 'column',
     'align-items': 'center',
-    border: 'solid blue 3px', 
     padding: '20px',
-    'max-width': '300px',
-    margin: 'auto',
-    'text-align': 'center',
+    height: 'auto',
+    margin: '20px',
+    background: 'rgba(255, 255, 255, 0.2)',
+    'text-align': 'left',
     'box-shadow': '0 4px 8px 0 rgba(0, 0, 0, 0.2)',
-    'text-overflow': 'ellipsis'
+    'text-overflow': 'ellipsis', 
+    'border-radius': '2%'
+  },
+
+  fullName: {
+    'margin-top': '1.2em'
+  },
+
+  descriptionTitle: {
+    // this will style our job title
   },
 
   socialMediaList: {
-    margin: '24px 0', 
-    'list-style-type': 'none'
+    'list-style-type': 'none', 
+    display: 'flex', 
+    'justify-content': 'row', 
   },
+
+  socialMediaLi: {
+    display: 'flex',
+    'justify-content': 'flex-start',
+  }, 
+
 
   jobTitle: {
     'font-size': '18px'
   },
 
   aboutUsSocialLinks: {
+    display: 'flex',
     'text-decoration': 'none',
+    'justify-content': 'flex-start',
   },
 
   aboutUsProfileImg: {
-    width: '100%',
+    width: '288px',
+    height: 'auto',
+    'border-radius': '2%',
     filter: theme => theme === 'standard' ? 'grayscale(0%)' : 'grayscale(100%)',
   },
 
   socialIconImg: {
     filter: theme => theme === 'standard' ? 'grayscale(0%)' : 'grayscale(100%)',
-    'border-radius': '50%',
-    width: '15%'
-  },
-
-  '@media (max-width: 1000px)': {
-    aboutUsDiv: {
-      flex: '25%',
-      'max-width': '50%'
-    },
-
-    img:{
-      width: '250px',
-      height: '250px'
-    }
-  },
-  
-  '@media (max-width: 640px)': {
-    aboutUsDiv: {
-      flex: '25%',
-      'max-width': '100%'
-    }
-  },
+    'border-radius': '50% ',
+    width: '3em', 
+    margin: '.5em'
+  }
 
 });
