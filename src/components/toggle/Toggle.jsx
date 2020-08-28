@@ -13,9 +13,9 @@ const Toggle = () => {
 
   return (
     <section>
-      <label >
+      <label className={classes.text} >
         <input 
-          className={classes.text}
+          
           id="toggle" 
           type="checkbox" 
           name="toggle" 

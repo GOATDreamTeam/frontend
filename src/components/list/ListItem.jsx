@@ -5,32 +5,37 @@ import LazyLoad from 'react-lazy-load';
 import AccessibleImage from '../photos/AccessibleImage';
 import { placeholder } from '../../hooks/globalStyles';
 
-const ListItem = ({ 
-  onClick, 
-  image_url, 
-  common_name, 
-  scientific_name, 
-  id,
-  imageClass }) => (
-
-  <Link to={`/plant-detail/${id}`} >
-    <figure onClick={onClick} id={id}>
+const ListItem = (
+  
+  { onClick, 
+    image_url, 
+    common_name, 
+    scientific_name, 
+    id,
+    imageClass }) => (
+  <>
+    <div className={imageClass.text}>
+      <Link to={`/plant-detail/${id}`} >
+        <figure onClick={onClick} id={id}>
     
-      <LazyLoad className={imageClass.row}>
-        <div>
-          {image_url 
-            ? 
-            <AccessibleImage className={imageClass.img} src={image_url} />
-            : 
-            <AccessibleImage className={imageClass.img} src={placeholder} />}
-        </div>
-      </LazyLoad>
-      
-      <figcaption className={imageClass.row}>
-        {common_name} <br/> {scientific_name} </figcaption>
+          <LazyLoad className={imageClass.row}>
+            <div>
+              {image_url 
+                ? 
+                <AccessibleImage className={imageClass.img} src={image_url} />
+                : 
+                <AccessibleImage className={imageClass.img} src={placeholder} />}
+            </div>
+          </LazyLoad>
 
-    </figure>
-  </Link>
+        </figure>
+    
+        <figcaption className={imageClass.row}>
+          {common_name} ~<br/> {scientific_name} </figcaption>
+      </Link>
+    </div>
+    
+  </>
 );
 
 ListItem.propTypes = {

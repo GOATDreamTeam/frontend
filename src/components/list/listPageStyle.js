@@ -15,7 +15,12 @@ export const useListStyles = createUseStyles({
     'flex-wrap': 'wrap',
     'justify-content': 'center',
     'align-items': 'center',
-    'list-style': 'none' 
+    'list-style': 'none',
+    'padding': '5px'
+  },
+
+  text: {
+    color: theme => `${cssVariables(theme).primaryColor}`
   },
 
   img: {
@@ -55,5 +60,10 @@ export const useListStyles = createUseStyles({
       flex: '25%',
       'max-width': '100%'
     }
-  }
+  },
+
+  // paging: {
+  //   display: 'flex',
+  //   float: 'right'
+  // }
 });

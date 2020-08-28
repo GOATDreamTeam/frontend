@@ -23,7 +23,6 @@ const useSearchStyles = createUseStyles({
 
 });
 
-
 const Autocomplete = () => {
   const { theme } = useAccessibility();
   const classes = useSearchStyles(theme);
@@ -35,7 +34,6 @@ const Autocomplete = () => {
 
   // lets us push to a new url
   const history = useHistory();
-  // const styles = useSearchStyling();
 
   useEffect(() => { 
     if(!searchTerm) return setShowOptions(false);
