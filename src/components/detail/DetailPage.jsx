@@ -17,7 +17,9 @@ const DetailPage = ({ match }) => {
   
   const id = match.params.id;
   const { plantDetail } = useDetails(id);
+
   if(!plantDetail) return <h1>Loading...</h1>;
+  
   const { 
     common_name,
     edible, 
