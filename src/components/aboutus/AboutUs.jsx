@@ -71,6 +71,7 @@ export default function AboutUs() {
           <h3 className={classes.fullName}>Nikki</h3>
           <h4 className={classes.descriptionTitle}>FullStack Developer</h4>
           <p>Lorem Ipsum has been the industyr standard dummy text ever since the 1500s, when an unknown printer took a galley of type and scrambled it to make a type specimen book. It has survived not only five centuries, but also the leap into electronic typesetting, remaining essentially unchanged.</p>
+          <br/>
 
           <ul className={classes.socialMediaList}>
             <li>
@@ -92,7 +93,12 @@ export default function AboutUs() {
           <img src={LangstonProfile} alt="" className={classes.aboutUsProfileImg}/>
           <h3 className={classes.fullName}>Langston</h3>
           <h4 className={classes.descriptionTitle}>FullStack Developer</h4>
-          <p>Lorem Ipsum has been the industyr standard dummy text ever since the 1500s, when an unknown printer took a galley of type and scrambled it to make a type specimen book. It has survived not only five centuries, but also the leap into electronic typesetting, remaining essentially unchanged.</p>
+          <p>Langston is a FullStack Developer and a Lover of all Plants.</p>
+          <br/>
+          <br/>
+          <br/>
+          <br/>
+          <br/>
           <ul className={classes.socialMediaList}>
             <li>
               <a href="https://github.com/langstonBS">
