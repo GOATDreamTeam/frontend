@@ -32,7 +32,7 @@ const DetailPage = ({ match }) => {
   return (
     <>
       <div className={classes.mainImageDisplay}>
-        <h1>{common_name}  |  {scientific_name}</h1>
+        <h1>{scientific_name} || {common_name}</h1>
         {image_url 
           ? 
           <AccessibleImage className={classes.img} src={image_url} alt={common_name} />
@@ -43,7 +43,7 @@ const DetailPage = ({ match }) => {
           <h3>Taxonomy </h3>
           <li>Family: {family}</li>
           <li>Genus: {genus}</li>
-          <h3>Is it edibile? </h3>
+          <h4>Edible:</h4>
           <p>{edible ? 'Yes' : 'No'}</p>
         </ul>
       </div>
@@ -55,7 +55,6 @@ const DetailPage = ({ match }) => {
         <Gallery photos={bark_images} />
         <Gallery photos={habit_images} />
       </div>
-  
     </>
   );
 };

@@ -18,7 +18,7 @@ const Toggle = () => {
     <section>
       <label>
         <input id="toggle" type="checkbox" name="toggle" onChange={handleChange} checked={theme === 'mono'}/>
-        Check for Monochrome color theme!
+        Check for Monochrome
         <span className={toggleStyles.slider}></span>
       </label>
     </section>
