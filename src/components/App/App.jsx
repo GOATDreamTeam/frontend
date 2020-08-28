@@ -7,7 +7,7 @@ import {
 require ('./App.css');
 import Header from '../header/Header';
 import SplashPage from '../splash-page/SplashPage';
-import Footer from '../footer/Footer';
+// import Footer from '../footer/Footer';
 import List from '../list/List';
 import DetailPage from '../detail/DetailPage';
 import AboutUs from '../aboutus/AboutUs';
@@ -31,7 +31,6 @@ export default function App() {
           <Route path="/plant-detail/:id" component={DetailPage} />
           <Route path="/about-us" component={AboutUs} />
         </Switch>
-        <Footer />
       </Router>
 
     </div>

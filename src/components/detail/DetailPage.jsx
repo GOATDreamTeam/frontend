@@ -6,6 +6,7 @@ import AccessibleImage from '../photos/AccessibleImage.jsx';
 import { useAccessibility } from '../../hooks/appContext.js';
 import { useDetailStyles } from '../../hooks/detailStyles';
 import { placeholder } from '../../hooks/globalStyles';
+import Footer from '../footer/Footer';
 
 const DetailPage = ({ match }) => {
 
@@ -55,10 +56,11 @@ const DetailPage = ({ match }) => {
         <Gallery photos={bark_images} />
         <Gallery photos={habit_images} />
       </div>
+
+      <Footer />
     </>
   );
 };
-
 
 DetailPage.propTypes = {
   match: PropTypes.object.isRequired
