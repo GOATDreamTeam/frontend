@@ -1,6 +1,7 @@
 import React from 'react';
 import PropTypes from 'prop-types';
 import MapChart from '../map/MapChart';
+import MapLegend from '../map/MapLegend';
 import Gallery from '../photos/Gallery.jsx';
 import AccessibleImage from '../photos/AccessibleImage.jsx';
 import Footer from '../footer/Footer';
@@ -52,6 +53,7 @@ const DetailPage = ({ match }) => {
       </div>
 
       <section className={classes.map}>
+        <MapLegend />
         <MapChart plantDetail={plantDetail}/>
       </section>
 
