@@ -12,7 +12,8 @@ export const headerColor = {
 
 export const cssVariables = theme => ({
   //right now this is controlling the frame color around the images
-  primaryColor: theme === 'standard' ? '#6c6a6a' : 'black'
+  primaryColor: theme === 'standard' ? '#6c6a6a' : 'black',
+  hoverColor: theme === 'standard' ? 'white' : 'white',
 });
 
 export const useStyles = createUseStyles({
@@ -22,14 +23,10 @@ export const useStyles = createUseStyles({
     color: theme => theme === 'standard' ? 'white' : 'black'
   },
 
+
   links: {
     fontFamily: 'times new roman',
     color: theme => theme === 'standard' ? 'green' : 'black ', 
-
-    // '&hover' : {
-    //   color: 'blue',
-    //   background: 'pink'
-    // },
   },
 
   basicDisplay: {

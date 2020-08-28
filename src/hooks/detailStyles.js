@@ -11,6 +11,8 @@ export const useDetailStyles = createUseStyles({
     paddingTop: '10px',
     'flex-direction': 'column',
     'text-align': 'center',
+    color: theme => `${cssVariables(theme).primaryColor}`
+
     // 'width': '50%',
     // 'height': '50%',
   }, 
@@ -21,7 +23,8 @@ export const useDetailStyles = createUseStyles({
 
   detailPageUl: { 
     'list-style-type': 'none',
-    padding: '20px'
+    padding: '20px',
+    color: theme => `${cssVariables(theme).primaryColor}`
   },
 
   galleryImagesDisplay: {
@@ -37,7 +40,7 @@ export const useDetailStyles = createUseStyles({
     width: '250px',
     height: '250px',
     'object-fit': 'cover',
-    border: theme => `solid 2px ${cssVariables(theme).primaryColor}`,
+    border: theme => `solid 2px ${cssVariables(theme).primaryColor}`, // needs cleaning 
     'border-radius': '2em'
   }
 
