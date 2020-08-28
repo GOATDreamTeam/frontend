@@ -5,6 +5,7 @@ import { useParams } from 'react-router-dom';
 import { updateTopSearchList } from '../../services/fetchCalls';
 import { useAccessibility } from '../../hooks/appContext';
 import { useListStyles } from './listPageStyle';
+import Footer from '../footer/Footer';
 
 const List = () => {
 
@@ -31,6 +32,8 @@ const List = () => {
       <ul className={classes.row}>
         {plantElements}
       </ul>
+
+      <Footer />
     </>
   );
 };
