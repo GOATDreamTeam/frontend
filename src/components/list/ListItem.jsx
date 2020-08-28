@@ -34,8 +34,8 @@ const ListItem = ({
 );
 
 ListItem.propTypes = {
-  image_url: PropTypes.string.isRequired,
-  common_name: PropTypes.string.isRequired,
+  image_url: PropTypes.string,
+  common_name: PropTypes.string,
   scientific_name: PropTypes.string.isRequired,
   id: PropTypes.number.isRequired, 
   onClick: PropTypes.func.isRequired,
