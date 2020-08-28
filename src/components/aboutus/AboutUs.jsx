@@ -15,8 +15,6 @@ export default function AboutUs() {
   const classes = useAboutUsStyles(theme);
 
   return (
-
-
     <div className={classes.pageTitleQuote}>
       <h1 className={classes.pageTitle}>Meet The Developers</h1>
 
@@ -30,7 +28,6 @@ export default function AboutUs() {
           <h4 className={classes.descriptionTitle}>FullStack Developer</h4>
           <p className={classes.description}>Lorem Ipsum has been the industry standard dummy text ever since the 1500s, when an unknown printer took a galley of type and scrambled it to make a type specimen book. It has survived not only five centuries, but also the leap into electronic typesetting, remaining essentially unchanged.</p>
 
-  
           <ul className={classes.socialMediaList}>
             <li className={classes.socialMediaLi}>
               <a href="https://github.com/bpagador">
