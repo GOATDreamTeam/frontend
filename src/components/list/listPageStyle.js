@@ -4,11 +4,13 @@ import { cssVariables } from '../../hooks/globalStyles';
 export const useListStyles = createUseStyles({
     
   column: {
+    display: 'flex',
     flex: '25%',
     'max-width': '20%',
     'justify-content': 'center',
     'align-items': 'center',
-    color: 'green'
+    color: 'green',
+    'text-align': 'center'
   }, 
 
   row: {
@@ -31,6 +33,7 @@ export const useListStyles = createUseStyles({
   links: {
     'text-decoration': 'none',
     color: theme => theme === 'standard' ? '#214044' : 'black',
+    'text-align': 'center'
   },
 
   '@media (max-width: 1300px)': {
