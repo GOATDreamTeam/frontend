@@ -4,7 +4,7 @@ import { useToggleStyles } from '../../hooks/useToggleStyleHooks';
 
 const Toggle = () => {
 
-  const theme  = useAccessibility();
+  const { theme }  = useAccessibility();
   const classes = useToggleStyles(theme);
   
   const {

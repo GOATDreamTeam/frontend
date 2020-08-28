@@ -15,21 +15,22 @@ export const cssVariables = theme => ({
   primaryColor: theme === 'standard' ? '#6c6a6a' : 'black',
   hoverColor: theme === 'standard' ? 'white' : 'white',
   // the below is not working in the way we expect, just stays gray
-  toggleText: theme === 'standard' ? 'black' : 'gray',
+  toggleText: theme === 'standard' ? 'white' : 'black',
+  secondaryColor: theme === 'standard' ? '#214044' : 'black',
 });
 
 export const useStyles = createUseStyles({
 
-  globalText: {
-    fontFamily: 'monospace',
-    color: theme => theme === 'standard' ? 'white' : 'black'
-  },
+  //   globalText: {
+  //     fontFamily: 'monospace',
+  //     color: theme => theme === 'standard' ? 'white' : 'black'
+  //   },
 
 
-  links: {
-    fontFamily: 'times new roman',
-    color: theme => theme === 'standard' ? 'green' : 'black ', 
-  },
+  //   links: {
+  //     fontFamily: 'times new roman',
+  //     color: theme => theme === 'standard' ? 'green' : 'black ', 
+  //   },
 
   basicDisplay: {
     'background': theme => theme === 'standard' ? 'linear-gradient(#f7fcf3, #aba499)' : 'white',

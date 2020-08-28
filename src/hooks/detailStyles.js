@@ -18,13 +18,14 @@ export const useDetailStyles = createUseStyles({
   }, 
 
   title: {
-    paddingBottom: '20px'
+    paddingBottom: '20px',
+    color: theme => `${cssVariables(theme).secondaryColor}`
   },
 
   detailPageUl: { 
     'list-style-type': 'none',
     padding: '20px',
-    color: theme => `${cssVariables(theme).primaryColor}`
+    color: theme => `${cssVariables(theme).secondaryColor}`
   },
 
   galleryImagesDisplay: {
