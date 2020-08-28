@@ -25,6 +25,7 @@
   "author": "",
   "license": "ISC",
   "dependencies": {
+    "@svgr/webpack": "^5.4.0",
     "d3-fetch": "^2.0.0",
     "d3-scale": "^3.2.2",
     "jss": "^10.4.0",

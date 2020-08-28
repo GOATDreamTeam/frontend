@@ -9,6 +9,7 @@ import { useDetails } from '../../hooks/detailHooks.js';
 import { useAccessibility } from '../../hooks/appContext.js';
 import { useDetailStyles } from '../../hooks/detailStyles';
 import { placeholder } from '../../hooks/globalStyles';
+import LoadingScreen from '../loading/LoadingScreen';
 
 const DetailPage = ({ match }) => {
 
@@ -17,7 +18,7 @@ const DetailPage = ({ match }) => {
   
   const id = match.params.id;
   const { plantDetail } = useDetails(id);
-  if(!plantDetail) return <h1>loading</h1>;
+  if(!plantDetail) return <LoadingScreen/>;
   const { 
     common_name,
     edible, 

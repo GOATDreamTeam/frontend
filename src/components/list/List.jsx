@@ -6,6 +6,7 @@ import { updateTopSearchList } from '../../services/fetchCalls';
 import { useAccessibility } from '../../hooks/appContext';
 import { useListStyles } from './listPageStyle';
 import Footer from '../footer/Footer';
+import LoadingScreen from '../loading/LoadingScreen';
 
 const List = () => {
 
@@ -24,15 +25,17 @@ const List = () => {
     <li className={classes.column} key={plant.id}>
       <ListItem imageClass={classes} onClick={() => handleClick(plant)} {...plant} />
     </li>
-  ));
+  )); 
 
   return (
     <>
-      <Pagination className={classes.paging}/>
-      <ul className={classes.row}>
-        {plantElements}
-      </ul>
-
+      {console.log(plantElements)}
+      <Pagination className={classes.paging} />
+      { plantElements.length > 0 ?
+        <ul className={classes.row}>
+          {plantElements}
+        </ul> 
+        : <LoadingScreen/> }
       <Footer />
     </>
   );
