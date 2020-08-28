@@ -1,5 +1,4 @@
 import { createUseStyles } from 'react-jss';
-// import { headerColor } from '../hooks/globalStyles.js';
 
 export const useHeaderStyle = createUseStyles({
 
@@ -20,6 +19,5 @@ export const useHeaderStyle = createUseStyles({
     letterSpacing: '4px',
     paddingRight: '20px',
     textShadow: theme => theme === 'standard' ? '2px 1px 2px black' : '2px 1px 2px white'
-  },
-
+  }
 });
