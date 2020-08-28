@@ -11,7 +11,7 @@ export default function SplashPage() {
  
     <div >
        
-      <div>
+      <div className={classes.appIntro}>
       Welcome to FloraFile, an open access encyclopedia for curious newbies and botanists alike. We are a group of developers centering accessibility by providing a Color Blind Mode throughout our entire application. We believe that accessible and inclusive web design should be for everyone.
       </div>
  

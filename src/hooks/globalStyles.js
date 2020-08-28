@@ -34,5 +34,7 @@ export const useStyles = createUseStyles({
 
   basicDisplay: {
     'background': theme => theme === 'standard' ? 'linear-gradient(#f7fcf3, #aba499)' : 'white',
+    height: '100%',
+    'min-height': '100vh'
   }
 });
