@@ -8,7 +8,8 @@ import {
 import states from '../../data/states';
 
 const MapChart = ({ plantDetail }) => {
-  if(!plantDetail.native_distributions.length) return null;
+
+  if(!plantDetail.native_distributions?.length) return null;
 
   return (
     <ComposableMap>
