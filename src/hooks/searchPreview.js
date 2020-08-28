@@ -1,4 +1,4 @@
-import { createUseStyles, withTheme } from 'react-jss';
+import { createUseStyles } from 'react-jss';
 import { cssVariables } from './globalStyles';
 
 export const useSearchStyles = createUseStyles({

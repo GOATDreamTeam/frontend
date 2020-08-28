@@ -8,6 +8,7 @@ export const useListStyles = createUseStyles({
     'max-width': '20%',
     'justify-content': 'center',
     'align-items': 'center',
+    color: 'green'
   }, 
 
   row: {
@@ -25,6 +26,11 @@ export const useListStyles = createUseStyles({
     'object-fit': 'cover',
     border: theme => `solid 2px ${cssVariables(theme).primaryColor}`,
     'border-radius': '2em'
+  },
+
+  links: {
+    'text-decoration': 'none',
+    color: theme => theme === 'standard' ? '#214044' : 'black',
   },
 
   '@media (max-width: 1300px)': {

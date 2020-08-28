@@ -13,7 +13,7 @@ const ListItem = ({
   id,
   imageClass }) => (
   <>
-    <Link to={`/plant-detail/${id}`} >
+    <Link className={imageClass.links} to={`/plant-detail/${id}`} >
       <figure onClick={onClick} id={id}>
     
         <LazyLoad className={imageClass.row}>
@@ -28,7 +28,7 @@ const ListItem = ({
 
       </figure>
     
-      <figcaption className={imageClass.row}>
+      <figcaption >
         {common_name} ~<br/> {scientific_name} </figcaption>
     </Link>
   </>
