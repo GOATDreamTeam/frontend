@@ -27,6 +27,3 @@ export const updateTopSearchList = ({ scientific_name, common_name, image_url })
   })
     .then(res => res.json());
 };
-
-// tech debt 
-// add pagination as our images are loading slowly

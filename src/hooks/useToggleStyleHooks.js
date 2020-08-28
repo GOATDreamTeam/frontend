@@ -1,4 +1,5 @@
-import { createUseStyles } from 'react-jss';
+import { createUseStyles } from 'react-jss'; 
+import { cssVariables } from './globalStyles';
 
 export const useToggleStyles = createUseStyles({
 
@@ -7,8 +8,12 @@ export const useToggleStyles = createUseStyles({
     cursor: 'pointer',
   },
 
-  text: {   
-    color: theme => theme === 'standard' ? 'white' : 'black'
+  // text: {   
+  //   color: theme => theme === 'standard' ? 'white' : 'black'
+  // },
+
+  paragraphText: {
+    color: theme => `${cssVariables(theme).toggleText}`
   }
 
 

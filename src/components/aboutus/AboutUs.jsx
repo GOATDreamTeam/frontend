@@ -26,7 +26,7 @@ export default function AboutUs() {
           
           <h3 className={classes.fullName}>Briseida </h3>
           <h4 className={classes.descriptionTitle}>FullStack Developer</h4>
-          <p className={classes.description}>Lorem Ipsum has been the industry standard dummy text ever since the 1500s, when an unknown printer took a galley of type and scrambled it to make a type specimen book. It has survived not only five centuries, but also the leap into electronic typesetting, remaining essentially unchanged.</p>
+          <p className={classes.description}>Briseida is a software developer and firm believer in the power of flowers and plants. Her mom has been saving a rose Briseida gave her in kindergarden for the past 26 years and that kind of love just hits like a ton of bricks, doesn’t it? Pro-plants, pro-moms, pro-indigenous sovereignty and the fight for environmental justice they lead.</p>
 
           <ul className={classes.socialMediaList}>
             <li className={classes.socialMediaLi}>
@@ -47,7 +47,8 @@ export default function AboutUs() {
           <img src={BreeannProfile} alt="" className={classes.aboutUsProfileImg}/>
           <h3 className={classes.fullName}>Breeann</h3>
           <h4 className={classes.descriptionTitle}>FullStack Developer</h4>
-          <p className={classes.description}>Hey there! My name is Breeann and I was part of the team that created FloraFile. I was really interested in this project was a combination of design-driven development and a passion for nature. I loved to develop a new way to bring tech and nature together in an informative way. </p>
+          <p className={classes.description}>Hey there! My name is Breeann and I was part of the team that created FloraFile. I was really interested in this project was a combination of design-driven development and a passion for our natural resources. I loved to develop a new way to bring tech and nature together in an informative way.</p>
+          <br/>
 
           <ul className={classes.socialMediaList}>
             <li>
@@ -70,6 +71,7 @@ export default function AboutUs() {
           <h3 className={classes.fullName}>Nikki</h3>
           <h4 className={classes.descriptionTitle}>FullStack Developer</h4>
           <p>Lorem Ipsum has been the industyr standard dummy text ever since the 1500s, when an unknown printer took a galley of type and scrambled it to make a type specimen book. It has survived not only five centuries, but also the leap into electronic typesetting, remaining essentially unchanged.</p>
+          <br/>
 
           <ul className={classes.socialMediaList}>
             <li>
@@ -91,7 +93,12 @@ export default function AboutUs() {
           <img src={LangstonProfile} alt="" className={classes.aboutUsProfileImg}/>
           <h3 className={classes.fullName}>Langston</h3>
           <h4 className={classes.descriptionTitle}>FullStack Developer</h4>
-          <p>Lorem Ipsum has been the industyr standard dummy text ever since the 1500s, when an unknown printer took a galley of type and scrambled it to make a type specimen book. It has survived not only five centuries, but also the leap into electronic typesetting, remaining essentially unchanged.</p>
+          <p>Langston is a FullStack Developer and a Lover of all Plants.</p>
+          <br/>
+          <br/>
+          <br/>
+          <br/>
+          <br/>
           <ul className={classes.socialMediaList}>
             <li>
               <a href="https://github.com/langstonBS">
@@ -112,6 +119,10 @@ export default function AboutUs() {
           <h3 className={classes.fullName}>Rachel</h3>
           <h4 className={classes.descriptionTitle}>FullStack Developer & Nature Nerd</h4>
           <p>A regular plant eater who is consistently nourished, surprised, and inspired by the natural world.</p>
+          <br/>
+          <br/>
+          <br/>
+          <br/>
           <ul className={classes.socialMediaList}>
             <li>
               <a href="https://github.com/PeepTheMoon">

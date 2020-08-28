@@ -2,29 +2,25 @@ import { createUseStyles } from 'react-jss';
 import { cssVariables } from './globalStyles';
 
 export const useDetailStyles = createUseStyles({
-
   mainImageDisplay: {
     display: 'flex',
     'justify-content': 'center',
     'align-items': 'center',
-    // 'border': '2px solid blue',
     paddingTop: '10px',
     'flex-direction': 'column',
     'text-align': 'center',
     color: theme => `${cssVariables(theme).primaryColor}`
-
-    // 'width': '50%',
-    // 'height': '50%',
   }, 
 
   title: {
-    paddingBottom: '20px'
+    paddingBottom: '20px',
+    color: theme => `${cssVariables(theme).secondaryColor}`
   },
 
   detailPageUl: { 
     'list-style-type': 'none',
     padding: '20px',
-    color: theme => `${cssVariables(theme).primaryColor}`
+    color: theme => `${cssVariables(theme).secondaryColor}`
   },
 
   galleryImagesDisplay: {
@@ -40,8 +36,14 @@ export const useDetailStyles = createUseStyles({
     width: '250px',
     height: '250px',
     'object-fit': 'cover',
-    border: theme => `solid 2px ${cssVariables(theme).primaryColor}`, // needs cleaning 
+    border: theme => `solid 2px ${cssVariables(theme).primaryColor}`,
     'border-radius': '2em'
-  }
+  },
 
+  map: {
+    margin: 'auto',
+    alignItems: 'center',
+    width: '80%',
+    filter: theme => theme === 'standard' ? 'grayscale(0%)' : 'grayscale(100%)'
+  }
 });
