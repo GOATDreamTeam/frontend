@@ -7,24 +7,21 @@ export const useDetailStyles = createUseStyles({
     display: 'flex',
     'justify-content': 'center',
     'align-items': 'center',
-    // 'border': '2px solid blue',
     paddingTop: '10px',
     'flex-direction': 'column',
     'text-align': 'center',
     color: theme => `${cssVariables(theme).primaryColor}`
-
-    // 'width': '50%',
-    // 'height': '50%',
   }, 
 
   title: {
-    paddingBottom: '20px'
+    paddingBottom: '20px',
+    color: theme => `${cssVariables(theme).secondaryColor}`
   },
 
   detailPageUl: { 
     'list-style-type': 'none',
     padding: '20px',
-    color: theme => `${cssVariables(theme).primaryColor}`
+    color: theme => `${cssVariables(theme).secondaryColor}`
   },
 
   galleryImagesDisplay: {

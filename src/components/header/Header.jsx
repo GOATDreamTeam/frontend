@@ -12,12 +12,10 @@ const Header = () => {
 
   return (
     <section className={classes.headerSection}>
-
-      <h1 className={classes.name}>FloraFile</h1>
-
       <div>
-
-        <Autocomplete className={classes.search}/>
+        <h1 className={classes.name}>FloraFile</h1>
+        
+        <Autocomplete />
         <Toggle /> 
       </div>
     </section>
