@@ -36,6 +36,18 @@ export const useListStyles = createUseStyles({
     'text-align': 'center'
   },
 
+  // previous and next buttons
+
+  previousButton: {
+    'background-color': '#f1f1f1',
+    color: 'black'
+  },
+
+  nextButton: {
+    'background-color': '#4CAF50',
+    color: 'white'
+  },
+
   '@media (max-width: 1300px)': {
     column: {
       flex: '25%',

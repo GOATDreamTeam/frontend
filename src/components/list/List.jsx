@@ -28,7 +28,7 @@ const List = () => {
 
   return (
     <>
-      <Pagination className={classes.paging}/>
+      <Pagination buttonClass={classes}/>
       <ul className={classes.row}>
         {plantElements}
       </ul>
