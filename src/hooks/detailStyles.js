@@ -10,7 +10,8 @@ export const useDetailStyles = createUseStyles({
     'border': '2px solid blue',
     'flex-direction': 'column',
     'text-align': 'center',
-
+    // 'width': '50%',
+    // 'height': '50%',
   }, 
 
   detailPageUl: { 

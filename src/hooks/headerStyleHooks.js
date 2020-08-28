@@ -1,9 +1,10 @@
 import { createUseStyles } from 'react-jss';
+// import { headerColor } from '../hooks/globalStyles.js';
 
 export const useHeaderStyle = createUseStyles({
 
   headerSection: {
-    backgroundColor: '#ea7b7b',
+    backgroundColor: '#214044',
     margin: '0px',
     padding: '20px',
     display: 'flex'
@@ -12,7 +13,10 @@ export const useHeaderStyle = createUseStyles({
   name: {
     float: 'left',
     fontFamily: 'Berkshire Swash',
-    fontSize: '30px'
+    fontSize: '40px',
+    color: '#ed9e91',
+    letterSpacing: '4px',
+    paddingRight: '20px'
   },
 
   searchBar: {

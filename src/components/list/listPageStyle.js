@@ -26,6 +26,18 @@ export const useListStyles = createUseStyles({
     'border-radius': '2em'
   },
 
+  '@media (max-width: 1300px)': {
+    column: {
+      flex: '25%',
+      'max-width': '25%'
+    },
+
+    img:{
+      width: '250px',
+      height: '250px'
+    }
+  },
+
   '@media (max-width: 1000px)': {
     column: {
       flex: '25%',
