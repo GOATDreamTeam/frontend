@@ -6,7 +6,6 @@ import { updateTopSearchList } from '../../services/fetchCalls';
 import { useAccessibility } from '../../hooks/appContext';
 import { useListStyles } from './listPageStyle';
 import Footer from '../footer/Footer';
-import LoadingScreen from '../loading/LoadingScreen';
 
 const List = () => {
 
@@ -31,11 +30,11 @@ const List = () => {
     <>
       {console.log(plantElements)}
       <Pagination className={classes.paging} />
-      { plantElements.length > 0 ?
-        <ul className={classes.row}>
-          {plantElements}
-        </ul> 
-        : <LoadingScreen/> }
+      
+      <ul className={classes.row}>
+        {plantElements}
+      </ul> 
+      
       <Footer />
     </>
   );
