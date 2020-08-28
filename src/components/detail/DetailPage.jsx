@@ -1,12 +1,14 @@
 import React from 'react';
 import PropTypes from 'prop-types';
-import { useDetails } from '../../hooks/detailHooks.js';
+import MapChart from '../map/MapChart';
+import MapLegend from '../map/MapLegend';
 import Gallery from '../photos/Gallery.jsx';
 import AccessibleImage from '../photos/AccessibleImage.jsx';
+import Footer from '../footer/Footer';
+import { useDetails } from '../../hooks/detailHooks.js';
 import { useAccessibility } from '../../hooks/appContext.js';
 import { useDetailStyles } from '../../hooks/detailStyles';
 import { placeholder } from '../../hooks/globalStyles';
-import Footer from '../footer/Footer';
 import LoadingScreen from '../loading/LoadingScreen';
 
 const DetailPage = ({ match }) => {
@@ -28,7 +30,7 @@ const DetailPage = ({ match }) => {
     image_url,
     scientific_name, 
     leaf_images, 
-    bark_images 
+    bark_images
   } = plantDetail;  
 
   return (
@@ -50,6 +52,11 @@ const DetailPage = ({ match }) => {
           <p>{edible ? 'Yes' : 'No'}</p>
         </ul>
       </div>
+
+      <section className={classes.map}>
+        <MapLegend />
+        <MapChart plantDetail={plantDetail}/>
+      </section>
 
       <div className={classes.galleryImagesDisplay}>
         <Gallery photos={leaf_images} />

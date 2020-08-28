@@ -2,7 +2,6 @@ import { createUseStyles } from 'react-jss';
 import { cssVariables } from './globalStyles';
 
 export const useDetailStyles = createUseStyles({
-
   mainImageDisplay: {
     display: 'flex',
     'justify-content': 'center',
@@ -37,8 +36,14 @@ export const useDetailStyles = createUseStyles({
     width: '250px',
     height: '250px',
     'object-fit': 'cover',
-    border: theme => `solid 2px ${cssVariables(theme).primaryColor}`, // needs cleaning 
+    border: theme => `solid 2px ${cssVariables(theme).primaryColor}`,
     'border-radius': '2em'
-  }
+  },
 
+  map: {
+    margin: 'auto',
+    alignItems: 'center',
+    width: '80%',
+    filter: theme => theme === 'standard' ? 'grayscale(0%)' : 'grayscale(100%)'
+  }
 });
