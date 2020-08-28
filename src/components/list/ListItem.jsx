@@ -13,7 +13,7 @@ const ListItem = ({
   id,
   imageClass }) => (
   <>
-    <Link to={`/plant-detail/${id}`} >
+    <Link className={imageClass.links} to={`/plant-detail/${id}`} >
       <figure onClick={onClick} id={id}>
     
         <LazyLoad className={imageClass.row}>
@@ -28,15 +28,15 @@ const ListItem = ({
 
       </figure>
     
-      <figcaption className={imageClass.row}>
+      <figcaption >
         {common_name} ~<br/> {scientific_name} </figcaption>
     </Link>
   </>
 );
 
 ListItem.propTypes = {
-  image_url: PropTypes.string.isRequired,
-  common_name: PropTypes.string.isRequired,
+  image_url: PropTypes.string,
+  common_name: PropTypes.string,
   scientific_name: PropTypes.string.isRequired,
   id: PropTypes.number.isRequired, 
   onClick: PropTypes.func.isRequired,

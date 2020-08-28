@@ -1,6 +1,7 @@
 import React from 'react';
-import { shallow } from 'enzyme';
+import { mount } from 'enzyme';
 import SearchPreview from './SearchPreview';
+import AccessibilityProvider from '../../providers/AppProvider';
 
 describe('Search preview', () => {
   const option = {
@@ -12,7 +13,7 @@ describe('Search preview', () => {
   let handleClick;
   beforeEach(() => {
     handleClick = jest.fn();
-    wrapper = shallow(<SearchPreview option={option} onClick={handleClick}/>);
+    wrapper = mount(<AccessibilityProvider><SearchPreview option={option} onClick={handleClick}/></AccessibilityProvider>);
   });
 
   it('has two spans', () => {

@@ -24,15 +24,17 @@ const List = () => {
     <li className={classes.column} key={plant.id}>
       <ListItem imageClass={classes} onClick={() => handleClick(plant)} {...plant} />
     </li>
-  ));
+  )); 
 
   return (
     <>
-      <Pagination className={classes.paging}/>
+      {console.log(plantElements)}
+      <Pagination className={classes.paging} />
+      
       <ul className={classes.row}>
         {plantElements}
-      </ul>
-
+      </ul> 
+      
       <Footer />
     </>
   );
