@@ -1,0 +1,40 @@
+.search {
+  width: 40%;
+  position: relative;
+}
+.searchInput {
+  border:0.1rem solid grey;
+  border-radius: 0.1rem;
+  font-size: 2.0rem;
+}
+.searchInput:focus {
+  outline: none;
+  font-size:2.0rem;
+  border-radius: 0.2rem;
+  padding: 1rem;
+  border: 0.1rem solid #8abaae;
+  transition: 0.04s;
+}
+.searchSubmit {
+  height: 100%;
+  width: 3em;
+  margin-top: -1.5em;
+  position: absolute;
+  top: 50%;
+
+  opacity: 0.2;
+  background-color: transparent;
+  border: 0;
+  background-repeat: no-repeat;
+  background-size: 100%;
+  background-image: url("https://icon-library.com/images/plant-icon/plant-icon-2.jpg");
+}
+.searchSubmit:hover {
+  outline: none;
+  opacity: 0.4;
+  cursor: pointer;
+}
+.searchSubmit:focus {
+  outline: none;
+  opacity: 0.9;
+}
