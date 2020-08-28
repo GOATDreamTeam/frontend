@@ -19,7 +19,6 @@ const useSearchStyles = createUseStyles({
   ul: {
     listStyle: 'none'
   }
-
 });
 
 const Autocomplete = () => {
@@ -32,8 +31,7 @@ const Autocomplete = () => {
     filteredOptions,
     onClick,
     onSubmit,
-    onChange,
-    onKeyDown
+    onChange
   } = useAutocomplete();
 
   //Conditional rendering for suggestions
@@ -52,7 +50,7 @@ const Autocomplete = () => {
     } else {
       optionList = (
         <>
-          <p>No Sugestions At This Time</p>
+          <p>No Suggestions At This Time</p>
         </>
       );
     }
@@ -68,11 +66,10 @@ const Autocomplete = () => {
               type="text"
               placeholder="Search Plants..."
               onChange={onChange}
-              onKeyDown={onKeyDown}
               value={searchTerm}
             />
             <button className={classes.button}>
-              <i style={{ fontSize: '14px' }}className="material-icons">search</i>
+              <i style={{ fontSize: '14px' }}className={'material-icons'} >search</i>
             </button>
           </div>
         </form>

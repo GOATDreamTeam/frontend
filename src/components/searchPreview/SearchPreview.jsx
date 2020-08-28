@@ -12,7 +12,6 @@ const SearchPreview = ({ option, onClick }) => {
   return (
     <li onClick={onClick} className={classes.preview}>
       <div >
-
         <AccessibleImage className={classes.photo} src={option.image_url} alt={option.common_name}/>
       </div>
       <div className={classes.text}>
@@ -29,8 +28,7 @@ const SearchPreview = ({ option, onClick }) => {
 
 SearchPreview.propTypes = {
   option: PropTypes.object.isRequired,
-  onClick: PropTypes.func.isRequired,
-  match: PropTypes.object.isRequired
+  onClick: PropTypes.func.isRequired
 };
 
 export default SearchPreview;
