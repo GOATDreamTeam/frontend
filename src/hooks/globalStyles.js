@@ -14,6 +14,8 @@ export const cssVariables = theme => ({
   //right now this is controlling the frame color around the images
   primaryColor: theme === 'standard' ? '#6c6a6a' : 'black',
   hoverColor: theme === 'standard' ? 'white' : 'white',
+  // the below is not working in the way we expect, just stays gray
+  toggleText: theme === 'standard' ? 'black' : 'gray',
 });
 
 export const useStyles = createUseStyles({
