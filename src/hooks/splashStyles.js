@@ -6,7 +6,13 @@ export const useSplashStyles = createUseStyles({
     display: 'flex',
     'justify-content': 'center',
     'align-items': 'center',
-    padding: '200px'
+    'padding-top': '1rem', 
+    'padding-bottom': '4rem'
     //ask Ryan about this page tomorrow 
+  },
+
+  appIntro: {
+    padding: '3rem',
+    'text-align': 'center'
   }
 });
