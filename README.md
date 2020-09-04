@@ -8,4 +8,4 @@
 - Rachel Donahue 
 
 ## Description 
-- tech debt, need to update this when we solidify our app idea
+- Welcome to FloraFile, an open access plant encyclopedia for curious newbies and botanists alike. We are a group of developers centering accessibility by providing a Color Blind Mode throughout our entire application. We believe that accessible and inclusive web design should be for everyone.
